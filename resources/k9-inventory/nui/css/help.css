@@ -1,0 +1,161 @@
+.sdthelp-main-container {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.sdthelp-controls:nth-child(1) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 48%;
+    height: 100%;
+}
+
+.sdthelp-controls:nth-child(2) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 48%;
+    height: 100%;
+}
+
+.sdthelp-controls-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    width: 100%;
+    height: 5%;
+    border-radius: 1px;
+    background-color: var(--case);
+    border: 0.1vh solid var(--yellow40);
+    box-shadow: 0 0 3px 0 var(--yellow);
+}
+
+.sdthelp-controls-header p {
+    position: relative;
+    margin-left: 1vh;
+    font-weight: 700;
+    font-size: 1.7vh;
+    color: white;
+    text-align: center;
+}
+
+.sdthelp-controls-infos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 2vh;
+    width: 100%;
+    height: 94%;
+}
+
+.sdthelp-controls-infos:nth-child(2) .sdthelp-controls-infos-options .sdthelp-controls-infos-text  h1 {
+    margin-left: 6vh;
+}
+
+.sdthelp-controls-infos-options {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5vh;
+    margin-bottom: 1vh;
+    background-color: var(--case);
+    border: 1px solid var(--border);
+    border-radius: .2vh;
+}
+.sdthelp-controls-infos-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 80%;
+    width: 4.5vh;
+    margin-left: .5vh;
+    float: left;
+    background-color: var(--case);
+    border: 1px solid var(--border);
+}
+
+.sdthelp-commands-infos-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 80%;
+    width: 12.5vh;
+    margin-left: .5vh;
+    float: left;
+    background-color: var(--case);
+    border: 1px solid var(--border);
+}
+
+
+.sdthelp-controls-infos-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    height: 80%;
+    width: 86vh;
+}
+
+.sdthelp-controls-infos-title p {
+    position: relative;
+    font-weight: 700;
+    font-size: 1.4vh;
+}
+
+.sdthelp-commands-infos-title p {
+    position: relative;
+    font-weight: 700;
+    font-size: 1.4vh;
+}
+
+.sdthelp-controls-infos-text h1 {
+    position: relative;
+    font-weight: 700;
+    font-size: 1.3vh;
+    text-transform: uppercase;
+}
+
+
+
+/* 
+.sdthelp-controls-table {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+}
+
+.sdthelp-controls-table th {
+    text-align: left;
+    width: 50%;
+    font-size: 2vh;
+    font-weight: 400;
+    padding-left: 0.75vh;
+    text-align: center;
+    color: white;
+}
+
+.sdthelp-controls-table th:nth-child(2) {
+    text-align: left;
+    color: #aeaeae;
+    font-size: 2vh;
+}
+
+.sdthelp-controls-table:nth-child(2) th:nth-child(1) {
+    text-align: left;
+    color: #aeaeae;
+    font-size: 1.5vh;
+} */
+
+    /* */

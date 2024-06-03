@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/leaderboard.css">
+    <link rel="stylesheet" href="./css/help.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/crew.css">
+    <link rel="stylesheet" href="./css/crewint.css">
+    <link rel="stylesheet" href="./css/arena.css">
+    <link rel="stylesheet" href="./css/settings.css">
+    <link rel="stylesheet" href="./css/shop.css">
+    <title>K9 INVENTORY</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="container">
+        <div class="side-bar">
+            <div class="side-bar-button-container">
+                <button class="side-bar-buttons" onclick="SetCurrentPage('inventory')" id="inventory">
+                    <p>INVENTORY</p>
+                </button>
+                
+                <button class="side-bar-buttons" onclick="SetCurrentPage('leaderboard')" id="leaderboard">
+                    <p>LEADERBOARD</p>
+                </button>
+                <button class="side-bar-buttons" onclick="SetCurrentPage('crew')" id="crew">
+                    <p>CREW</p>
+                </button>
+                <button class="side-bar-buttons" onclick="SetCurrentPage('arena')" id="arena">
+                    <p>ARENA</p>
+                </button>
+                
+                <button class="side-bar-buttons" onclick="SetCurrentPage('settings')" id="settings">
+                    <p>SETTINGS</p>
+                </button>
+
+                
+            </div>
+            <div class="profil" onclick="SetCurrentPage('profile')">
+                <div class="infoplayer">
+                    <div class="pseudo">NTMzr'zrzrzeezezezrzrrzrr(123)</div>
+                    <div class="points moneyuniversel">$199 999</div>
+                </div>
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="lappsteamplayer" class="lappsteamdujoueuruniverselle">
+            </div>
+        </div>
+        
+    </div>
+    <div class="barlinear"></div>
+    <div class="sdt-main-contain"> <!-- stash-active-main -->
+        <div class="sdt-player-inv">
+            <div class="sdt-inv-header">
+                <h1>INVENTORY</h1>
+                <div class="header-sidebar-place">
+                    
+
+                </div>
+            </div>
+            <div class="sdt-inv-content" id="inv-content">
+                <div class="sdt-item-slot epic-item">
+                    <div class="item-slot-state"></div>
+                    <div class="image-bg">
+                        <img src="assets/items/deluxo.png" alt="">
+                    </div>
+                    <div class="item-slot-info">
+                        <h1>Deluxo</h1>
+                        <p class="item-count">x2</p>
+                    </div>
+                </div>
+                <div class="sdt-item-slot legend-item">
+                    <div class="item-slot-state"></div>
+                    <div class="image-bg">
+                        <img src="assets/items/deluxo.png" alt="">
+                    </div>
+                    <div class="item-slot-info">
+                        <h1>Deluxo</h1>
+                        <p class="item-count">x2</p>
+                    </div>
+                </div>
+                <div class="sdt-item-slot legend-item">
+                    <div class="item-slot-state"></div>
+                    <div class="image-bg">
+                        <img src="assets/items/deluxo.png" alt="">
+                    </div>
+                    <div class="item-slot-info">
+                        <h1>Deluxo</h1>
+                        <p class="item-count">x2</p>
+                    </div>
+                </div>
+                <div class="sdt-item-slot common-item">
+                    <div class="item-slot-state"></div>
+                    <div class="image-bg">
+                        <img src="assets/items/deluxo.png" alt="">
+                    </div>
+                    <div class="item-slot-info">
+                        <h1>Deluxo</h1>
+                        <p class="item-count">x2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sdt-protected-inv" id="protected-inv"> 
+            <div class="sdt-inv-header">
+                <h1><span>SAFE INVENTORY</span></h1>
+                <div class="header-weight">
+                    <div class="weight-text">
+                        <!--<p style="font-size: 1.8vh;"><span class="weight">25</span>KG</p>
+                        <p style="font-size: 2vh;">/</p>
+                        <p style="font-size: 2.4vh;"><span class="maxWeight">50</span>KG</p>-->
+                    </div>
+                    <!--<div class="weight-progress">
+                       <div class="progress"></div>
+                    </div>-->
+                </div>
+            </div>
+            <div class="sdt-inv-content">
+                <div class="sdt-item-slot legend-item">
+                    <div class="item-slot-state"></div>
+                    <div class="image-bg">
+                        <img src="assets/items/deluxo.png" alt="">
+                    </div>
+                    <div class="item-slot-info">
+                        <h1>Deluxo</h1>
+                        <p class="item-count">x2</p>
+                    </div>
+                </div>
+                <div class="sdt-item-slot rare-item">
+                    <div class="item-slot-state"></div>
+                    <div class="image-bg">
+                        <img src="assets/items/deluxo.png" alt="">
+                    </div>
+                    <div class="item-slot-info">
+                        <h1>Deluxo</h1>
+                        <p class="item-count">x2</p>
+                    </div>
+                </div>
+                <div class="sdt-item-slot uncommon-item">
+                    <div class="item-slot-state"></div>
+                    <div class="image-bg">
+                        <img src="assets/items/deluxo.png" alt="">
+                    </div>
+                    <div class="item-slot-info">
+                        <h1>Deluxo</h1>
+                        <p class="item-count">x2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sdt-hotbar-inv"> 
+            <div class="sdt-hotbarinv-header">
+                <h1>SLOTS</h1>
+            </div>
+            <div class="sdt-hotbarinv-content">
+                <div class="sdt-item-slot common-item" data-id="1" name="hotbar">
+                    <div class="item-slot-state"></div>
+                    <!-- <img src="assets/items/deluxo.png" alt=""> -->
+                    <div class="item-slot-info">
+                        <h1></h1>
+                        <!-- <p>2X</p> -->
+                    </div>
+                    <div class="hotbarslot-numbers">
+                        <h1>1</h1>
+                    </div>
+                </div>
+                <div class="sdt-item-slot common-item" data-id="2" name="hotbar">
+                    <div class="item-slot-state"></div>
+                    <!-- <img src="assets/deluxo.png" alt=""> -->
+                    <div class="item-slot-info">
+                        <h1></h1>
+                        <!-- <p>2X</p> -->
+                    </div>
+                    <div class="hotbarslot-numbers">
+                        <h1>2</h1>
+                    </div>
+                </div>
+                <div class="sdt-item-slot common-item" data-id="3" name="hotbar">
+                    <div class="item-slot-state"></div>
+                    <!-- <img src="assets/deluxo.png" alt=""> -->
+                    <div class="item-slot-info">
+                        <h1></h1>
+                        <!-- <p>2X</p> -->
+                    </div>
+                    <div class="hotbarslot-numbers">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <div class="sdt-item-slot common-item" data-id="4" name="hotbar">
+                    <div class="item-slot-state"></div>
+                    <!-- <img src="assets/deluxo.png" alt=""> -->
+                    <div class="item-slot-info">
+                        <h1></h1>
+                        <!-- <p>2X</p> -->
+                    </div>
+                    <div class="hotbarslot-numbers">
+                        <h1>4</h1>
+                    </div>
+                </div>
+                <div class="sdt-item-slot common-item" data-id="5" name="hotbar">
+                    <div class="item-slot-state"></div>
+                    <!-- <img src="assets/deluxo.png" alt=""> -->
+                    <div class="item-slot-info">
+                        <h1></h1>
+                        <!-- <p>2X</p> -->
+                    </div>
+                    <div class="hotbarslot-numbers">
+                        <h1>5</h1>
+                    </div>
+                </div>
+                <div class="sdt-item-slot common-item" data-id="6" name="hotbar">
+                    <div class="item-slot-state"></div>
+                    <!-- <img src="assets/deluxo.png" alt=""> -->
+                    <div class="item-slot-info">
+                        <h1></h1>
+                        <!-- <p>2X</p> -->
+                    </div>
+                    <div class="hotbarslot-numbers">
+                        <h1>6</h1>
+                    </div>
+                </div>
+                <div class="sdt-item-slot common-item" data-id="7" name="hotbar">
+                    <div class="item-slot-state"></div>
+                    <!-- <img src="assets/deluxo.png" alt=""> -->
+                    <div class="item-slot-info">
+                        <h1></h1>
+                        <!-- <p>2X</p> -->
+                    </div>
+                    <div class="hotbarslot-numbers">
+                        <h1>7</h1>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="profile">
+        <div class="leprofil">
+            <div class="partiegauche">
+                <div class="leplayerinfoprofil">
+                    <div class="progress-ring">
+                        <svg class="progress" id="progress" x="0px" y="0px" viewBox="0 0 80 80" style="--percentage: 100;">
+                            <path class="track" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" />
+                            <path class="fill" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" />
+                        </svg>
+                        <span class="progress-text" id="progress-text">99</span>
+                        <span class="level-text" id="level-text">LEVEL</span>
+                    </div>
+                    <div class="allinfoprofil">
+                        <div class="lesinfoplayer">
+                            <div class="lacolonne">
+                                <div class="monpseudoprofil pseudouniversel">LidlPrice</div>
+                                <div class="soustitre">Pseudo</div>
+                            </div>
+                            <div class="lacolonne">
+                                <div class="mycrewprofil">Not in a crew</div>
+                                <div class="soustitre">Crew</div>
+                            </div>
+                            <div class="lacolonne">
+                                <div class="mycountryprofil">France</div>
+                                <div class="soustitre">Country</div>
+                            </div>
+                            <div class="lacolonne">
+                                <div class="mytotalquestprofil">0</div>
+                                <div class="soustitre">Total quests</div>
+                            </div>
+                            <div class="lamoney">
+                                <div class="mymoneyprofil moneyuniversel">$9 999</div>
+                                <div class="soustitre">Money</div>
+                            </div>
+                        </div>
+                        <div class="lesbuttonsprofil">
+                            <div class="infoquest grise clicker">Info quests</div>
+                            <div class="questshop lejaune clicker">Quests Shop</div>
+                            <div class="lesk9points">
+                                <div class="myk9pointsprofil">9 999</div>
+                                <div class="soustitre">K9 Points</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="mystats">
+                    <div class="textstat">YOUR STATS</div>
+                    <div class="soustitre">Overview of your stats</div>
+                    <div class="allbuttonstats">
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStats('pvp')" id="pvp">
+                            K9 global
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStats('redzone')" id="redzone">
+                            Redzone
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStats('darkzone')" id="darkzone">
+                            Darkzone
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStats('airdrop')" id="airdrop">
+                            Airdrop
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStats('deluxoarena')" id="deluxoarena">
+                            Deluxo Arena
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStats('battleroyale')" id="battleroyale">
+                            Battle Royale
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStats('account')" id="account">
+                            Account
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStats('gungame')" id="gungame">
+                            Gungame
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStats('deathmatch')" id="deathmatch">
+                            Death Match
+                        </div>
+                    </div>
+                    <div class="lestatsplayerprofil">
+                        <div class="lacolonnestat">
+                            <div class="kdstat lejaune">9</div>
+                            <div class="grise soustitre">KD/A</div>
+                        </div>
+                        <div class="lacolonnestat">
+                            <div class="kdstat lejaune">9</div>
+                            <div class="grise soustitre">KD/A</div>
+                        </div>
+                        <div class="lacolonnestat">
+                            <div class="kdstat lejaune">9</div>
+                            <div class="grise soustitre">KD/A</div>
+                        </div>
+                        <div class="lacolonnestat">
+                            <div class="kdstat lejaune">9</div>
+                            <div class="grise soustitre">KD/A</div>
+                        </div>
+                        <div class="lacolonnestat">
+                            <div class="kdstat lejaune">9</div>
+                            <div class="grise soustitre">KD/A</div>
+                        </div>
+                    </div>
+                    <div class="lerankstatplayerprofil">
+                        <div class="larankedstat">Unranked</div>
+                        <div class="larankedstat">Unranked</div>
+                        <div class="larankedstat">Unranked</div>
+                        <div class="larankedstat">Unranked</div>
+                        <div class="larankedstat">Unranked</div>
+                    </div>
+                </div>
+                <div class="myquests">
+                    <div class="textquests">QUESTS</div>
+                    <div class="soustitre">Your quests</div>
+                </div>
+            </div>
+            <div class="partiedroite">
+                <div class="accountinfo">
+                    <div class="textprofil">PROFIL</div>
+                    <div class="soustitre">Account Info</div>
+                        
+                        <div class="allaccountinfo">
+                            <img id="imgaccountinfo" class="lappsteamdujoueuruniverselle" src="assets/discord-avatar-512-0ISPX.gif">
+                            <div class="unecolonne">
+                                <div class="infoaccountcolonne">
+                                    <div class="lacolonneaccountinfo">
+                                        <div class="monpseudoaccountprofil pseudouniversel">LidlPrice</div>
+                                        <div class="soustitre">Pseudo</div>
+                                    </div>
+                                    <div class="lacolonneaccountinfo">
+                                        <div class="monidaccountprofil">99</div>
+                                        <div class="soustitre">Id</div>
+                                    </div>
+                                    <div class="colonnekcoins">
+                                        <div class="monnombrekcoinsaccountprofil lejaune">1 000 000</div>
+                                        <div class="soustitre">KCoins</div>
+                                    </div>
+                                </div>
+                                <div class="lesbuttonsaccount">
+                                    <div class="buttonrefreshkcoins clicker grise">Refresh KCoins</div>
+                                    <div class="buttonbuykcoins grise">Buy KCoins</div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    
+                </div>
+                <div class="transactioninfo">
+                    <div class="texttransaction">TRANSACTIONS</div>
+                    <div class="soustitre">Tebex Transactions</div>
+                    <div class="lestransactions">
+                        <div class="alltransactions">
+                           <!--  <div class="transactionitem">
+                                <img id="imgtransactionpp" class="lappsteamdujoueuruniverselle" src="assets/discord-avatar-512-0ISPX.gif">
+                                <div class="colonnetransaction">
+                                    <div class="ladatetransaction">22.01.23</div>
+                                    <div class="soustitre">Date of the Tebex transaction</div>
+                                </div>
+                                <div class="colonnetransaction2">
+                                    <div class="nombrekcoinrecu lejaune">+1 200</div>
+                                    <div class="soustitre">KCoins</div>
+                                </div>
+                            </div> -->
+                            
+                        </div>
+                        <div class="havenottransaction grise">You don’t have any transactions.</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="crew">
+        <div class="crew-image">
+            <img src="./assets/icons/crewimage.png" alt="">
+        </div>
+        <div class="crew-main">
+            <div class="text-crew">
+                <h1>YOU DON'T HAVE A CREW</h1>
+                <h2>You can either create your own crew or join existing one</h2>
+                <h3>Here are some benefits of being in a crew </h3>
+            </div>
+            <div class="case-content">
+                <div class="caserow-item">
+                    <div class="image-case">
+                        <img src="./assets/icons/allies.png" alt="">
+                    </div>
+                    <div class="text-content">
+                        <p class="title">ALLIES</p>
+                        <p class="description">Go into battle with your most loyal allies and you'll have a better chance of surviving in this world. The more you are, the better it is.</p>
+                    </div>
+                </div>
+                <div class="caserow-item">
+                    <div class="image-case">
+                        <img src="./assets/icons/trophy.png" alt="">
+                    </div>
+                    <div class="text-content">
+                        <p class="title">EVENTS</p>
+                        <p class="description">Take part in events and tournaments with your team and win incredible prizes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-crew">
+                <div class="button-crew"  onclick="popupopen()">CREATE A CREW</div>
+                <div class="button-crew" onclick="popupinvite()">INVITES</div>
+            </div>
+        </div>
+
+        <div class="popup-invite">
+            <div class="popup-invitecrew">
+                <div class="popup-title">
+                    <h1>INVITE</h1>
+                    <div class="popup-inviteclose" onclick="popupinviteclose()">
+                        <p>CLOSE</p>
+                    </div>
+                </div>
+                <div class="popup-invite-content">
+                    <div class="popup-inviterow">
+                        <div class="popup-invite-crewimage">
+                            <img src="https://media.discordapp.net/attachments/1079514678348226651/1115352750172164156/a9610a2a253dd263999a19cd3710aeff.webp?ex=655270b1&is=653ffbb1&hm=c92275feea5e1e7d29e403b67b1b867f2af298b2f50f8925ed33378e7431e7ec&=" alt="">
+                        </div>
+                        <div class="popup-invite-crewname">
+                            <p>MPXSTONEXLIDL<p> #</p><p>6666</p></p>
+                        </div>
+                        <div class="popup-invite-button">
+                            <div class="invite-button accept-invite" onclick="acceptinvite()">ACCEPT</div>
+                            <div class="invite-button refuse-invite" onclick="refuseinvite()">REFUSE</div>
+                        </div>
+                    </div>
+                    <div class="popup-inviterow">
+                        <div class="popup-invite-crewimage">
+                            <img src="https://media.discordapp.net/attachments/1079514678348226651/1115352750172164156/a9610a2a253dd263999a19cd3710aeff.webp?ex=655270b1&is=653ffbb1&hm=c92275feea5e1e7d29e403b67b1b867f2af298b2f50f8925ed33378e7431e7ec&=" alt="">
+                        </div>
+                        <div class="popup-invite-crewname">
+                            <p>MPXSTONEXLIDL<p> #</p><p>6666</p></p>
+                        </div>
+                        <div class="popup-invite-button">
+                            <div class="invite-button accept-invite" onclick="acceptinvite()">ACCEPT</div>
+                            <div class="invite-button refuse-invite" onclick="refuseinvite()">REFUSE</div>
+                        </div>
+                    </div>
+                    <div class="popup-inviterow">
+                        <div class="popup-invite-crewimage">
+                            <img src="https://media.discordapp.net/attachments/1079514678348226651/1115352750172164156/a9610a2a253dd263999a19cd3710aeff.webp?ex=655270b1&is=653ffbb1&hm=c92275feea5e1e7d29e403b67b1b867f2af298b2f50f8925ed33378e7431e7ec&=" alt="">
+                        </div>
+                        <div class="popup-invite-crewname">
+                            <p>MPXSTONEXLIDL<p> #</p><p>6666</p></p>
+                        </div>
+                        <div class="popup-invite-button">
+                            <div class="invite-button accept-invite" onclick="acceptinvite()">ACCEPT</div>
+                            <div class="invite-button refuse-invite" onclick="refuseinvite()">REFUSE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-create">
+            <div class="popup-createcrew">
+                <div class="popup-title">
+                    <h1>CREATE A CREW</h1>
+                </div>
+                <div class="popup-crewname">
+                    <p>CREW NAME</p>
+                    <input type="text" name="" id="crewname" ng-model="text" onKeyPress="if(this.value.length==16) return false;" min="4" required="required">
+                </div>
+                <div class="popup-crewtag">
+                    <p>CREW TAG</p>
+                    <input type="number" name="" id="crewtag" ng-model="number" onKeyPress="if(this.value.length==4) return false;" min="4" required="required">
+                </div>  
+                <div class="popup-crewimage">
+                    <p>CREW IMAGE (url) </p>
+                    <input type="text" name="" id="crewimage">
+                </div>
+                <div class="popup-crewbutton">
+                    <div class="button-crews accept" onclick="accept()">CREATE</div>
+                    <div class="button-crews cancel" onclick="Cancel()">CANCEL</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="crew">
+        <div class="crew-image">
+            <img src="./assets/icons/crewimage.png" alt="">
+        </div>
+        <div class="crew-main">
+            <div class="text-crew">
+                <h1>YOU DON'T HAVE A CREW</h1>
+                <h2>You can either create your own crew or join existing one</h2>
+                <h3>Here are some benefits of being in a crew </h3>
+            </div>
+            <div class="case-content">
+                <div class="caserow-item">
+                    <div class="image-case">
+                        <img src="./assets/icons/allies.png" alt="">
+                    </div>
+                    <div class="text-content">
+                        <p class="title">ALLIES</p>
+                        <p class="description">Go into battle with your most loyal allies and you'll have a better chance of surviving in this world. The more you are, the better it is.</p>
+                    </div>
+                </div>
+                <div class="caserow-item">
+                    <div class="image-case">
+                        <img src="./assets/icons/trophy.png" alt="">
+                    </div>
+                    <div class="text-content">
+                        <p class="title">EVENTS</p>
+                        <p class="description">Take part in events and tournaments with your team and win incredible prizes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-crew">
+                <div class="button-crew"  onclick="popupopen()">CREATE A CREW</div>
+                <div class="button-crew" onclick="popupinvite()">INVITES</div>
+            </div>
+        </div>
+
+        <div class="popup-invite">
+            <div class="popup-invitecrew">
+                <div class="popup-title">
+                    <h1>INVITE</h1>
+                    <div class="popup-inviteclose" onclick="popupinviteclose()">
+                        <p>CLOSE</p>
+                    </div>
+                </div>
+                <div class="popup-invite-content">
+                    <div class="popup-inviterow">
+                        <div class="popup-invite-crewimage">
+                            <img src="https://media.discordapp.net/attachments/1079514678348226651/1115352750172164156/a9610a2a253dd263999a19cd3710aeff.webp?ex=655270b1&is=653ffbb1&hm=c92275feea5e1e7d29e403b67b1b867f2af298b2f50f8925ed33378e7431e7ec&=" alt="">
+                        </div>
+                        <div class="popup-invite-crewname">
+                            <p>MPXSTONEXLIDL<p> #</p><p>6666</p></p>
+                        </div>
+                        <div class="popup-invite-button">
+                            <div class="invite-button accept-invite" onclick="acceptinvite()">ACCEPT</div>
+                            <div class="invite-button refuse-invite" onclick="refuseinvite()">REFUSE</div>
+                        </div>
+                    </div>
+                    <div class="popup-inviterow">
+                        <div class="popup-invite-crewimage">
+                            <img src="https://media.discordapp.net/attachments/1079514678348226651/1115352750172164156/a9610a2a253dd263999a19cd3710aeff.webp?ex=655270b1&is=653ffbb1&hm=c92275feea5e1e7d29e403b67b1b867f2af298b2f50f8925ed33378e7431e7ec&=" alt="">
+                        </div>
+                        <div class="popup-invite-crewname">
+                            <p>MPXSTONEXLIDL<p> #</p><p>6666</p></p>
+                        </div>
+                        <div class="popup-invite-button">
+                            <div class="invite-button accept-invite" onclick="acceptinvite()">ACCEPT</div>
+                            <div class="invite-button refuse-invite" onclick="refuseinvite()">REFUSE</div>
+                        </div>
+                    </div>
+                    <div class="popup-inviterow">
+                        <div class="popup-invite-crewimage">
+                            <img src="https://media.discordapp.net/attachments/1079514678348226651/1115352750172164156/a9610a2a253dd263999a19cd3710aeff.webp?ex=655270b1&is=653ffbb1&hm=c92275feea5e1e7d29e403b67b1b867f2af298b2f50f8925ed33378e7431e7ec&=" alt="">
+                        </div>
+                        <div class="popup-invite-crewname">
+                            <p>MPXSTONEXLIDL<p> #</p><p>6666</p></p>
+                        </div>
+                        <div class="popup-invite-button">
+                            <div class="invite-button accept-invite" onclick="acceptinvite()">ACCEPT</div>
+                            <div class="invite-button refuse-invite" onclick="refuseinvite()">REFUSE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-create">
+            <div class="popup-createcrew">
+                <div class="popup-title">
+                    <h1>CREATE A CREW</h1>
+                </div>
+                <div class="popup-crewname">
+                    <p>CREW NAME</p>
+                    <input type="text" name="" id="crewnamee" ng-model="text" onKeyPress="if(this.value.length==16) return false;" min="4" required="required">
+                </div>
+                <div class="popup-crewtag">
+                    <p>CREW TAG</p>
+                    <input type="number" name="" id="crewtage" ng-model="number" onKeyPress="if(this.value.length==4) return false;" min="4" required="required">
+                </div>  
+                <div class="popup-crewimage">
+                    <p>CREW IMAGE (url) </p>
+                    <input type="text" name="" id="crewimagee">
+                </div>
+                <div class="popup-crewbutton">
+                    <div class="button-crews accept" onclick="accept()">CREATE</div>
+                    <div class="button-crews cancel" onclick="Cancel()">CANCEL</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lecrewzz">
+
+    
+        <div class="lecrew">
+            <div class="partiegauche">
+                <div class="leplayerinfocrew">
+                    <img id="imgaccountinfo" class="ppcreww" src="assets/discord-avatar-512-0ISPX.gif">
+                    <div class="allinfocrew">
+                        <div class="lesinfoplayer">
+                            <div class="lacolonne">
+                                <div class="mycrewname">LidlPrice</div>
+                                <div class="soustitre">Crew Name</div>
+                            </div>
+                            <div class="lacolonne">
+                                <div class="mycrewtag">Not in a crew</div>
+                                <div class="soustitre">Crew Tag</div>
+                            </div>
+                            <div class="lacolonne">
+                                <div class="mycountrycrew">France</div>
+                                <div class="soustitre">Country</div>
+                            </div>
+                            <div class="lacolonne">
+                                <div class="mytotalplayercrew">1/30</div>
+                                <div class="soustitre">Total Players</div>
+                            </div>
+                            <div class="lamoney">
+                                <div class="myk9pointscrew">999</div>
+                                <div class="soustitre">Points K9</div>
+                            </div>
+                        </div>
+                        <div class="lesbuttonscrew">
+                            <div class="infoquest grise clicker" onclick="LeaveCrew()">Leave Crew</div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="mystats">
+                    <div class="textstat">YOUR STATS</div>
+                    <div class="soustitre">Overview of your stats</div>
+                    <div class="allbuttonstats">
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStatsCrew('pvp')" id="pvp">
+                            K9 global
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStatsCrew('redzone')" id="redzone">
+                            Redzone
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStatsCrew('darkzone')" id="darkzone">
+                            Darkzone
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStatsCrew('airdrop')" id="airdrop">
+                            Airdrop
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStatsCrew('deluxoarena')" id="deluxoarena">
+                            Deluxo Arena
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStatsCrew('battleroyale')" id="battleroyale">
+                            Battle Royale
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStatsCrew('account')" id="account">
+                            Account
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStatsCrew('gungame')" id="gungame">
+                            Gungame
+                        </div>
+                        <div class="itemsbuttonstats grise clicker" onclick="SetPageStatsCrew('deathmatch')" id="deathmatch">
+                            Death Match
+                        </div>
+                    </div>
+                    <div class="lestatsplayercrew">
+                        <div class="lacolonnestatcrew">
+                            <div class="kdstat lejaune">0</div>
+                            <div class="grise soustitre">KD/A</div>
+                        </div>
+                        <div class="lacolonnestatcrew">
+                            <div class="kdstat lejaune">0</div>
+                            <div class="grise soustitre">KD/A</div>
+                        </div>
+                        <div class="lacolonnestatcrew">
+                            <div class="kdstat lejaune">0</div>
+                            <div class="grise soustitre">KD/A</div>
+                        </div>
+                        <div class="lacolonnestatcrew">
+                            <div class="kdstat lejaune">0</div>
+                            <div class="grise soustitre">KD/A</div>
+                        </div>
+                        <div class="lacolonnestatcrew">
+                            <div class="kdstat lejaune">0</div>
+                            <div class="grise soustitre">KD/A</div>
+                        </div>
+                    </div>
+                    <div class="lerankstatplayercrew">
+                        <div class="larankedstat">Unranked</div>
+                        <div class="larankedstat">Unranked</div>
+                        <div class="larankedstat">Unranked</div>
+                        <div class="larankedstat">Unranked</div>
+                        <div class="larankedstat">Unranked</div>
+                    </div>
+                </div>
+                <div class="myquests">
+                    <div class="textquests">QUESTS</div>
+                    <div class="soustitre">Your quests</div>
+                </div>
+            </div>
+            <div class="partiedroite">
+                <div class="playerinfo">
+                    <div class="textcrewplayer">CREW PLAYERS</div>
+                    <div class="soustitre">Players List</div>
+                    <div class="allplayerinfo">
+                        <div class="itemplayerlist">
+                            <img src="k923.png" id="imgplayerlist">
+                            <div class="lacolonneplayerinfo">
+                                <div class="textcolonneplayerinfo">99999</div>
+                                <div class="soustitre">Server ID</div>
+                            </div>
+                            <div class="lacolonneplayerinfo">
+                                <div class="textcolonneplayerinfo">LidlPrice TE NTM SUR LE</div>
+                                <div class="soustitre">Name</div>
+                            </div>
+                            <div class="lacolonneplayerinfo">
+                                <div class="textcolonneplayerinfo">999</div>
+                                <div class="soustitre">Kills</div>
+                            </div>
+                            <div class="lacolonneplayerinfo">
+                                <div class="textcolonneplayerinfo">999</div>
+                                <div class="soustitre">Death</div>
+                            </div>
+                            <div class="lacolonneplayerinfo">
+                                <div class="textcolonneplayerinfo">9.99</div>
+                                <div class="soustitre">K/D</div>
+                            </div>
+                            <div class="lacolonneplayerinfo">
+                                <div class="textcolonneplayerinfo">999 999$</div>
+                                <div class="soustitre">Money</div>
+                            </div>
+                            <div class="lacolonneplayerinfo">
+                                <div class="textcolonneplayerinfo lejaune">Owner</div>
+                                <div class="soustitre">Permission</div>
+                            </div>
+                            <div class="buttonmanage">MANAGE</div>
+                            <div class="isplayeronline online"></div>
+                        </div>
+                    </div>
+                    <div class="manageplayercrew">
+                        <div class="limgmanagerplayercrew">
+                            <img src="k923.png" id="manageplayercrewimg">
+                            <div class="pseudoplayermanagecrew">Lidleprice(99)</div>
+                        </div>
+                        <div class="actionmanageplayer">
+                            <div class="uniquekick">
+                                <div class="kickmanage" style="background: #FF0000;">KICK</div>
+                            </div>
+                            <div class="autreaction">
+                                <div class="demotemanage" style="background: #FF9900;">DEMOTE</div>
+                                <div class="promotemanage" style="background: #42FF00;">PROMOTE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+
+    <div class="leaderboard">
+        <div class="PlayerTopThree"> 
+            <div class="TopItem">
+                <div class="top-image">
+                    <img src="https://media.discordapp.net/attachments/1185577842789064714/1185628423733903400/discord-avatar-512-0ISPX.gif?ex=65904d84&is=657dd884&hm=4577f0b0651f861bae88c06b683262213e37ef0e8c186af6be465a5d98440d80&=" alt="">
+                </div>
+                <div class="place"><p>#1</p></div>
+                <div class="username-leaderboardTop">
+                    <p>Username</p>
+                </div>
+
+            </div>
+            <div class="TopItem">
+                <div class="top-image">
+                    <img src="https://media.discordapp.net/attachments/1185577842789064714/1185628423733903400/discord-avatar-512-0ISPX.gif?ex=65904d84&is=657dd884&hm=4577f0b0651f861bae88c06b683262213e37ef0e8c186af6be465a5d98440d80&=" alt="">
+                </div>
+                <div class="place"><p>#2</p></div>
+                <div class="username-leaderboardTop">
+                    <p>Username</p>
+                </div>
+                
+            </div>
+            <div class="TopItem">
+                <div class="top-image">
+                    <img src="https://media.discordapp.net/attachments/1185577842789064714/1185628423733903400/discord-avatar-512-0ISPX.gif?ex=65904d84&is=657dd884&hm=4577f0b0651f861bae88c06b683262213e37ef0e8c186af6be465a5d98440d80&=" alt="">
+                </div>
+                <div class="place"><p>#3</p></div>
+                <div class="username-leaderboardTop">
+                    <p>Username</p>
+                </div>
+                
+            </div>
+            <div class="TopItem">
+                <div class="top-image">
+                    <img src="https://media.discordapp.net/attachments/1185577842789064714/1185628423733903400/discord-avatar-512-0ISPX.gif?ex=65904d84&is=657dd884&hm=4577f0b0651f861bae88c06b683262213e37ef0e8c186af6be465a5d98440d80&=" alt="">
+                </div>
+                <div class="place"><p>#4</p></div>
+                <div class="username-leaderboardTop">
+                    <p>Username</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="sdt-leaderboard">
+            <div class="leaderboard-button">
+                <div class="leaderboard-button-item" id="player" onclick="SetCurrentPage('leaderboard')"><p>PLAYER</p></div>
+                <div class="leaderboard-button-item" id="crew" onclick="SetCurrentPage('leaderboardcrew')"><p>CREW</p></div>
+            </div>
+            <div class="sdtleaderboard-main">
+                <div class="sdtleaderboard-title">
+                    <p>#</p>
+                    <p>NAME</p>
+                    <p>POINT</p>
+                    <p>KILL</p>
+                    <p>DEATH</p>
+                    <p>RATIO</p>
+                </div>
+                <div class="sdtleaderboard-content">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="leaderboardcrew">
+        <div class="PlayerTopThreecrew"> 
+            <div class="TopItemcrew">
+                <div class="topcrew-image">
+                    <img src="https://media.discordapp.net/attachments/1185577842789064714/1185628423733903400/discord-avatar-512-0ISPX.gif?ex=65904d84&is=657dd884&hm=4577f0b0651f861bae88c06b683262213e37ef0e8c186af6be465a5d98440d80&=" alt="">
+                </div>
+                <div class="placecrew"><p>#1</p></div>
+                <div class="username-leaderboardcrewTop">
+                    <p>CREWNAME</p>
+                </div>
+
+            </div>
+            <div class="TopItemcrew">
+                <div class="topcrew-image">
+                    <img src="https://media.discordapp.net/attachments/1185577842789064714/1185628423733903400/discord-avatar-512-0ISPX.gif?ex=65904d84&is=657dd884&hm=4577f0b0651f861bae88c06b683262213e37ef0e8c186af6be465a5d98440d80&=" alt="">
+                </div>
+                <div class="placecrew"><p>#2</p></div>
+                <div class="username-leaderboardcrewTop">
+                    <p>CREWNAME</p>
+                </div>
+                
+            </div>
+            <div class="TopItemcrew">
+                <div class="topcrew-image">
+                    <img src="https://media.discordapp.net/attachments/1185577842789064714/1185628423733903400/discord-avatar-512-0ISPX.gif?ex=65904d84&is=657dd884&hm=4577f0b0651f861bae88c06b683262213e37ef0e8c186af6be465a5d98440d80&=" alt="">
+                </div>
+                <div class="placecrew"><p>#3</p></div>
+                <div class="username-leaderboardcrewTop">
+                    <p>CREWNAME</p>
+                </div>
+                
+            </div>
+            <div class="TopItemcrew">
+                <div class="topcrew-image">
+                    <img src="https://media.discordapp.net/attachments/1185577842789064714/1185628423733903400/discord-avatar-512-0ISPX.gif?ex=65904d84&is=657dd884&hm=4577f0b0651f861bae88c06b683262213e37ef0e8c186af6be465a5d98440d80&=" alt="">
+                </div>
+                <div class="placecrew"><p>#4</p></div>
+                <div class="username-leaderboardcrewTop">
+                    <p>CREWNAME</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="sdt-leaderboardcrew">
+            <div class="leaderboardcrew-button">
+                <div class="leaderboardcrew-button-item" id="player" onclick="SetCurrentPage('leaderboard')"><p>PLAYER</p></div>
+                <div class="leaderboardcrew-button-item" id="crews" onclick="SetCurrentPage('leaderboardcrew')"><p>CREW</p></div>
+            </div>
+            <div class="sdtleaderboardcrew-main">
+                <div class="sdtleaderboardcrew-title">
+                    <p>#</p>
+                    <p>CREW NAME</p>
+                    <p>KILL</p>
+                    <p>DEATH</p>
+                    <p>K/D</p>
+                    <p>REDZONES KILLS</p>
+                    <p>REDZONES DEATHS</p>
+                </div>
+                <div class="sdtleaderboardcrew-content">
+                    <div class="sdtleaderboardcrewrow-item">
+                        <h1>1</h1>
+                        <p>MP</p>
+                        <p>150000</p>
+                        <p>1242</p>
+                        <p>932</p>
+                        <p>1.32</p>
+                        <p>1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="kit">
+        <div class="containerkit">
+            <div class="contenuekit">
+                <div class="contenuekititem">
+                    <div class="typecontenue">VEHICLES</div>
+                    <div class="labelcontenue" id="labelvehicle">REVOLTER</div>
+                    <img src="./assets/items/revolter.png" id="imgcontenuekit" class="vehicle">
+                </div>
+                <div class="contenuekititem">
+                    <div class="typecontenue">WEAPONS</div>
+                    <div class="labelcontenue" id="labelweapon">SPECIAL CARBINE</div>
+                    <img src="./assets/items/weapon_tacticalrifle.png" id="imgcontenuekit" class="weapon">
+                </div>
+                    
+                
+            </div>
+            <div class="allstarterkit">
+                <div class="starterkit">
+                    <div class="titlestarter">STARTER KIT</div>
+                </div>
+            </div>
+                
+            
+            <div class="allkit">
+                <div class="itemkit" id="starterkit">
+                    <!-- <div class="achieved"> -->
+                        <!-- <div class="haut"> -->
+                            <div class="titleallkit">STARTER KIT</div>
+                            <!-- <img src="./assets/icons/check.png" id="check"> -->
+                        <!-- </div> -->
+                        
+                            <div class="imagekit"><img src="./assets/icons/starter.png" id="imagekits"></div>
+                            <div class="imagecontenue">
+                                <img src="./assets/items/revolter.png" id="lesimagecontenue" class="vehiclecontenue" label="REVOLTER">
+                                <img src="./assets/items/weapon_assaultsmg.png" id="lesimagecontenue" class="weaponcontenue" label="ASSAULT SMG">
+                            </div>
+                    <!-- </div> -->
+                </div>
+    
+                <div class="itemkit" id="dailykit">
+                    <div class="titleallkit">DAILY KIT</div>
+                    <div class="imagekit"><img src="./assets/icons/starter.png" id="imagekits"></div>
+                    <div class="imagecontenue">
+                        <img src="./assets/items/revolter.png" id="lesimagecontenue" class="vehiclecontenue" label="REVOLTER">
+                        <img src="./assets/items/weapon_tacticalrifle.png" id="lesimagecontenue" class="weaponcontenue" label="TACTICAL RIFLE">
+                    </div>
+                </div>
+    
+                <div class="itemkit" id="goldkit">
+                    <div class="titleallkit">GOLD KIT</div>
+                    <div class="imagekit"><img src="./assets/icons/starter.png" id="imagekits"></div>
+                    <div class="imagecontenue">
+                        <img src="./assets/items/deathbike.png" id="lesimagecontenue" class="vehiclecontenue" label="DEATHBIKE">
+                        <img src="./assets/items/weapon_bullpuprifle.png" id="lesimagecontenue" class="weaponcontenue" label="BULLPUP RIFLE">
+                    </div>
+                </div>
+    
+                <div class="itemkit" id="diamondkit">
+                    <div class="titleallkit">DIAMOND KIT</div>
+                    <div class="imagekit"><img src="./assets/icons/starter.png" id="imagekits"></div>
+                    <div class="imagecontenue">
+                        <img src="./assets/items/deluxo.png" id="lesimagecontenue" class="vehiclecontenue" label="DELUXO">
+                        <img src="./assets/items/weapon_combatmg.png" id="lesimagecontenue" class="weaponcontenue" label="M60">
+                    </div>
+                </div>
+    
+                <div class="itemkit" id="discordkit">
+                    <div class="titleallkit">DISCORD KIT</div>
+                    <div class="imagekit"><img src="./assets/icons/starter.png" id="imagekits"></div>
+                    <div class="imagecontenue">
+                        <img src="./assets/items/buffalo2.png" id="lesimagecontenue" class="vehiclecontenue" label="BUFFALO S">
+                        <img src="./assets/items/weapon_tacticalrifle.png" id="lesimagecontenue" class="weaponcontenue" label="SERVICE CARBINE">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="arena">
+        <div class="arena-main">
+            <div class="arena-title">
+                <p>ARENA</p>
+            </div>
+            <div class="arena-content">
+                <div class="arena-contents">
+                    <div class="arena-item" style="background-image: url('https://media.discordapp.net/attachments/1186408920688898048/1190625173829844993/MWII-LAUNCH-MP-004-.png?ex=65a27b1a&is=6590061a&hm=ccb71ff7414a694431095340d2ff376de6a60aa2e384ef228ce1f77b42506648&=&format=webp&quality=lossless&width=1202&height=676'); background-position: 50% 50%; background-size: 150% 100%; background-repeat: no-repeat;" onclick="arena('deathmatch')">
+                        <div class="arena-title-item">
+                            <p>DEATHMATCH</p>
+                        </div>
+                        <div class="arenaactive">
+                            <div class="actifarena">
+                                <p>In Activity</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="arena-item" style="background-image: url('https://media.discordapp.net/attachments/1186408920688898048/1190625691675406467/04L-Vehicles-002.png?ex=65a27b95&is=65900695&hm=8a3024ca598d5a8e6636fccf8c09d54f606b6b430223c0f92f88c34f90b81785&=&format=webp&quality=lossless&width=1202&height=676'); background-position: 50% 50%; background-size: 130% 100%; background-repeat: no-repeat;" onclick="arena('deluxotricks')">
+                        <div class="arena-title-item">
+                            <p>DELUXO TRICKS</p>
+                        </div>
+                        <div class="arenaactive">
+                            <div class="actifarena">
+                                <p>In Activity</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arena-item" style="background-image: url('https://media.discordapp.net/attachments/1186408920688898048/1190621060232654908/lobby_2.420cded2.png?ex=65a27745&is=65900245&hm=f8d88b38ba0fc0e95edad7651f9ab6f54a017f1b26736e6107aa63919bc2c6f2&=&format=webp&quality=lossless&width=1202&height=676');  background-position: 70% 50%; background-size: 290% 100%;; background-repeat: no-repeat;"  onclick="arena('gungame')">
+                        <div class="arena-title-item">
+                            <p>GUNGAME</p>
+                        </div>
+                        <div class="arenaactive">
+                            <div class="actifarena">
+                                <p>In Activity</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arena-item" style="background-image: url('https://media.discordapp.net/attachments/1186408920688898048/1190624278345949194/WZM-LIMITEDRELEASE-2-TOUT-2.jpg?ex=65a27a44&is=65900544&hm=c20b9c68388519c64072463d4bc27014b7df425fe39f212400febfa7130b7ef0&=&format=webp&width=1077&height=676');  background-position: 50% 50%; background-size: 150% 100%; background-repeat: no-repeat;"  onclick="arena('battleroyale')">
+                        <div class="arena-title-item">
+                            <p>BATTLE ROYALE</p>
+                        </div>
+                        <div class="arenaactive">
+                            <div class="actifarena noactif">
+                                <p>Not active</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+    <div class="settings">
+        <div class="lessettings">
+            <div class="partiegauchesettings">
+                <div class="titresettings">HITMARKER</div>
+                <div class="hitmarkersettings">
+                    <div class="hitmarkersound">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">HitMarker sounds</div>
+                            <div class="soustitre">Choose your hitmarker sounds</div>
+                        </div>
+                        
+                        <div class="listsound">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterList(event, 'hitmarker', 'sound')">
+                                    <option value="Option1">Sound 1</option>
+                                    <option value="Option2">Sound 2</option>
+                                    <option value="Option3">Sound 3</option>
+                                    <option value="Option4">Sound 4</option>
+                                    <option value="Option5">Sound 5</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="hitmarkersize">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">HitMarker size</div>
+                            <div class="soustitre">Choose your hitmarker size</div>
+                        </div>
+                        <div class="buttonhitmarkersize">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterList(event, 'hitmarker', 'size')">
+                                    <option value="Option1">Small</option>
+                                    <option value="Option2">Medium</option>
+                                    <option value="Option3">Big</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hitmarkeradditional">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">HitMarker additional</div>
+                            <div class="soustitre">Enable or disable additional hitmarker</div>
+                        </div>
+                        <div class="buttonhitmarkeradditional">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterEnable(event, 'hitmarker', 'additional')">
+                                    <option value="Option1">Enable</option>
+                                    <option value="Option2">Disable</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="titresettingszombies">ZOMBIES</div>
+                <div class="zombiesettings">
+                    <div class="zombiesounds">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">Zombies sounds</div>
+                            <div class="soustitre">Enable or disable zombies sounds</div>
+                        </div>
+                        <div class="buttonzombiesounds">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterEnable(event, 'zombie', 'sound')">
+                                    <option value="Option1">Enable</option>
+                                    <option value="Option2">Disable</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="autozombieloot">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">Auto zombies loot</div>
+                            <div class="soustitre">Enable or disable auto zombies loot</div>
+                        </div>
+                        <div class="buttonautozombieloot">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterEnable(event, 'zombie', 'autoloot')">
+                                    <option value="Option1">Enable</option>
+                                    <option value="Option2">Disable</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="titresettingsfpsboost">FPS BOOST</div>
+                <div class="fpsboostsettings">
+                    <div class="fpsboost">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">FPS Boost</div>
+                            <div class="soustitre">Enable or disable fps boost</div>
+                        </div>
+                        <div class="buttonfpsboost">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterEnable(event, 'fpsboost', 'enable')">
+                                    <option value="Option1">Enable</option>
+                                    <option value="Option2">Disable</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partiemilieusettings">
+                <div class="titresettings">INVENTORY</div>
+                <div class="titreinventorycase">INVENTORY CASE (SOON...)</div>
+                <div class="soustitre">Choose your favorite inventory case</div>
+                <div class="inventorycase">
+                    <div class="itemcase">
+                        <div class="image-bg">
+                            <img src="assets/items/deluxo.png" alt="">
+                        </div>
+                        <div class="item-slot-info">
+                            <h1>Deluxo</h1>
+                            <p class="item-count">x2</p>
+                        </div>
+                    </div>
+                    <div class="itemcase2">
+                        <div class="image-bg">
+                            <p class="item-count">x2</p>
+                            <img src="assets/items/deluxo.png" alt="">
+                        </div>
+                        <div class="item-slot-info">
+                            <h1>Deluxo</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="titreinventoryopacity">INVENTORY OPACITY</div>
+                <div class="soustitre">Choose your inventory opacity</div>
+                <div class="containerslider">
+                    <input type="range" min="1" max="100" value="65" class="slider" id="myRange">
+                    <div id="valuerange">65%</div>
+                </div>
+                <div class="inventorycolor">
+                    <div class="lacolonneinventorycolor">
+                        <div class="titreinventorycolor">INVENTORY COLOR</div>
+                        <div class="soustitre">Choose your inventory color</div>
+                    </div>
+                    <div class="containercolor">
+                        <input type="color" class="colorinv" id="colorinv" name="colorinv" value="#e66465" />
+                        <div class="valuecolorinv">#E66465</div>
+                    </div>
+                </div>
+            </div>
+            <div class="partiedroitesettings">
+                <div class="titresettings">PRIVACY</div>
+                <div class="privacysettings">
+                    <div class="streamermodesettings">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">STREAMER MODE</div>
+                            <div class="soustitre">Enable or disable the streamer mode</div>
+                        </div>
+                        <div class="buttonstreamermodesettings">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterEnable(event, 'privacy', 'streamer')">
+                                    <option value="Option1">Enable</option>
+                                    <option value="Option2">Disable</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tradesettings">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">TRADE REQUEST</div>
+                            <div class="soustitre">Enable or disable trade request</div>
+                        </div>
+                        <div class="buttontradesettings">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterEnable(event, 'privacy', 'trade')">
+                                    <option value="Option1">Enable</option>
+                                    <option value="Option2">Disable</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="steamsettings">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">SHOW YOUR STEAM PDP</div>
+                            <div class="soustitre">Enable or Disable being able to see your steam pdp</div>
+                        </div>
+                        <div class="buttonsteamsettings">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterEnable(event, 'privacy', 'ppsteam')">
+                                    <option value="Option1">Enable</option>
+                                    <option value="Option2">Disable</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="crewrequestsettings">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">CREW REQUEST</div>
+                            <div class="soustitre">Enable or disable crew request</div>
+                        </div>
+                        <div class="buttoncrewrequestsettings">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterEnable(event, 'privacy', 'crew')">
+                                    <option value="Option1">Enable</option>
+                                    <option value="Option2">Disable</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="titregolddiamond">DIAMOND/PALADIUM</div>
+                <div class="golddiamondsettings">
+                    <div class="speedboostsafesettings">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">SPEED BOOST IN SAFEZONE</div>
+                            <div class="soustitre">Enable or disable the speed boost in safezone</div>
+                        </div>
+                        <div class="buttonspeedboostsafesettings">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterEnable(event, 'vip', 'speedboost')">
+                                    <option value="Option1">Enable</option>
+                                    <option value="Option2">Disable</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="autozombiefarmsettings">
+                        <div class="lacolonnehitmarker">
+                            <div class="soustitlehitmarker">AUTO ZOMBIES FARM</div>
+                            <div class="soustitre">Enable or disable auto zombies farm</div>
+                        </div>
+                        <div class="buttonautozombiefarmsettings">
+                            <div class="select">
+                                <select id="standard-select" onchange="SetParameterEnable(event, 'vip', 'autofarmzombie')">
+                                    <option value="Option1">Enable</option>
+                                    <option value="Option2">Disable</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+
+    <div class="help">
+        <div class="sdthelp-main-container">
+            <div class="sdthelp-controls">
+                <div class="sdthelp-controls-header"> <p>DEFAULT CONTROLS</p> </div>
+                <div class="sdthelp-controls-infos">
+                    <!-- <div class="sdthelp-controls-infos-options">
+                        <div class="sdthelp-controls-infos-title"><p>K</p></div>
+                        <div class="sdthelp-controls-infos-text"><h1>Put your vehicle back on your inventory</h1></div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="sdthelp-controls">
+                <div class="sdthelp-controls-header"><p>COMMANDS</p></div>
+                <div class="sdthelp-controls-infos">
+                    <!-- <div class="sdthelp-controls-infos-options">
+                        <div class="sdthelp-commands-infos-title"><p>/crew</p></div>
+                        <div class="sdthelp-controls-infos-text"><h1>Manage your crew</h1></div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="leshop">
+        <div class="shop">
+            <div class="alliteminshop">
+                <div class="buttonshop">
+                    <div class="buyorsell">
+                        <div class="buy">BUY</div>
+                        <div class="sell">SELL</div>
+                        <div class="lesellall">
+                            <div class="sellall">SELL ALL</div>
+                        </div>
+                    </div>
+                    <div class="filtreshop">
+                        <div class="recherche">
+                            <label for="" id="ntm">
+                                <input placeholder="">
+                            </label>
+                        </div>
+                        <div class="weaponorvehicle">WEAPON</div>
+                    </div>
+                </div>
+                <div class="lesitems">
+                    <div class="itemshop">
+                        <img src="assets/items/weapon_specialcarbine.png" id="imgitemshop">
+                        <div class="infoitem">
+                            <div class="nameitem">Special Carbine</div>
+                            <div class="typeitem">Weapon</div>
+                            <div class="priceitem">$99 999</div>
+                        </div>
+                        <div class="buyitem">Buy</div>
+                    </div>
+
+                    <div class="itemshop">
+                        <img src="assets/items/weapon_specialcarbine.png" id="imgitemshop">
+                        <div class="infoitem">
+                            <div class="nameitem">Special Carbine</div>
+                            <div class="typeitem">Weapon</div>
+                            <div class="priceitem">$99 999</div>
+                        </div>
+                        <div class="buyitem">Buy</div>
+                    </div>
+
+                    <div class="itemshop">
+                        <img src="assets/items/weapon_specialcarbine.png" id="imgitemshop">
+                        <div class="infoitem">
+                            <div class="nameitem">Special Carbine</div>
+                            <div class="typeitem">Weapon</div>
+                            <div class="priceitem">$99 999</div>
+                        </div>
+                        <div class="buyitem">Buy</div>
+                    </div>
+                    <div class="itemshop">
+                        <img src="assets/items/weapon_specialcarbine.png" id="imgitemshop">
+                        <div class="infoitem">
+                            <div class="nameitem">Special Carbine</div>
+                            <div class="typeitem">Weapon</div>
+                            <div class="priceitem">$99 999</div>
+                        </div>
+                        <div class="buyitem">Buy</div>
+                    </div>
+                    <div class="itemshop">
+                        <img src="assets/items/weapon_specialcarbine.png" id="imgitemshop">
+                        <div class="infoitem">
+                            <div class="nameitem">Special Carbine</div>
+                            <div class="typeitem">Weapon</div>
+                            <div class="priceitem">$99 999</div>
+                        </div>
+                        <div class="buyitem">Buy</div>
+                    </div>
+                    <div class="itemshop">
+                        <img src="assets/items/weapon_specialcarbine.png" id="imgitemshop">
+                        <div class="infoitem">
+                            <div class="nameitem">Special Carbine</div>
+                            <div class="typeitem">Weapon</div>
+                            <div class="priceitem">$99 999</div>
+                        </div>
+                        <div class="buyitem">Buy</div>
+                    </div>
+                    <div class="itemshop">
+                        <img src="assets/items/weapon_specialcarbine.png" id="imgitemshop">
+                        <div class="infoitem">
+                            <div class="nameitem">Special Carbine</div>
+                            <div class="typeitem">Weapon</div>
+                            <div class="priceitem">$99 999</div>
+                        </div>
+                        <div class="buyitem">Buy</div>
+                    </div>
+                    <div class="itemshop">
+                        <img src="assets/items/weapon_specialcarbine.png" id="imgitemshop">
+                        <div class="infoitem">
+                            <div class="nameitem">Special Carbine</div>
+                            <div class="typeitem">Weapon</div>
+                            <div class="priceitem">$99 999</div>
+                        </div>
+                        <div class="buyitem">Buy</div>
+                    </div>
+                    <div class="itemshop">
+                        <img src="assets/items/weapon_specialcarbine.png" id="imgitemshop">
+                        <div class="infoitem">
+                            <div class="nameitem">Special Carbine</div>
+                            <div class="typeitem">Weapon</div>
+                            <div class="priceitem">$99 999</div>
+                        </div>
+                        <div class="buyitem">Buy</div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="paniershop">
+                <div class="infoshop">
+                    <div class="lacolonneshop">
+                        <div class="titleshop">SHOPPING CART</div>
+                        <div class="soustitre">Content of the basket</div>
+                    </div>
+                    <div class="lacolonneshop">
+                        <div class="titleshop">Money</div>
+                        <div class="soustitre moneyshop">Balance : $999 999 999 999</div>
+                    </div>
+                </div>
+                <div class="lepanier">
+                    <div class="itempaniershop">
+                        <div class="larowshop">
+                            <div class="nameweaponpanier">Special Carbine</div>
+                            <div class="priceweaponpanier">$99 999</div>
+                        </div>
+                        <div class="typeweaponpanier">Type : Weapon</div>
+                        <div class="larowshop">
+                            <div class="laquantity">
+                                <div class="textquantity">Quantity :</div>
+                                <div class="quantityweaponshop">9</div>
+                            </div>
+                            <div class="lapoubelle">
+                                <i class="fa-light fa-trash"></i>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="itempaniershop">
+                        <div class="larowshop">
+                            <div class="nameweaponpanier">Special Carbine</div>
+                            <div class="priceweaponpanier">$99 999</div>
+                        </div>
+                        <div class="typeweaponpanier">Type : Weapon</div>
+                        <div class="larowshop">
+                            <div class="laquantity">
+                                <div class="textquantity">Quantity :</div>
+                                <div class="quantityweaponshop">9</div>
+                            </div>
+                            <div class="lapoubelle">
+                                <i class="fa-light fa-trash"></i>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="itempaniershop">
+                        <div class="larowshop">
+                            <div class="nameweaponpanier">Special Carbine</div>
+                            <div class="priceweaponpanier">$99 999</div>
+                        </div>
+                        <div class="typeweaponpanier">Type : Weapon</div>
+                        <div class="larowshop">
+                            <div class="laquantity">
+                                <div class="textquantity">Quantity :</div>
+                                <div class="quantityweaponshop">9</div>
+                            </div>
+                            <div class="lapoubelle">
+                                <i class="fa-light fa-trash"></i>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="itempaniershop">
+                        <div class="larowshop">
+                            <div class="nameweaponpanier">Special Carbine</div>
+                            <div class="priceweaponpanier">$99 999</div>
+                        </div>
+                        <div class="typeweaponpanier">Type : Weapon</div>
+                        <div class="larowshop">
+                            <div class="laquantity">
+                                <div class="textquantity">Quantity :</div>
+                                <div class="quantityweaponshop">9</div>
+                            </div>
+                            <div class="lapoubelle">
+                                <i class="fa-light fa-trash"></i>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="itempaniershop">
+                        <div class="larowshop">
+                            <div class="nameweaponpanier">Special Carbine</div>
+                            <div class="priceweaponpanier">$99 999</div>
+                        </div>
+                        <div class="typeweaponpanier">Type : Weapon</div>
+                        <div class="larowshop">
+                            <div class="laquantity">
+                                <div class="textquantity">Quantity :</div>
+                                <div class="quantityweaponshop">9</div>
+                            </div>
+                            <div class="lapoubelle">
+                                <i class="fa-light fa-trash"></i>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="itempaniershop">
+                        <div class="larowshop">
+                            <div class="nameweaponpanier">Special Carbine</div>
+                            <div class="priceweaponpanier">$99 999</div>
+                        </div>
+                        <div class="typeweaponpanier">Type : Weapon</div>
+                        <div class="larowshop">
+                            <div class="laquantity">
+                                <div class="textquantity">Quantity :</div>
+                                <div class="quantityweaponshop">9</div>
+                            </div>
+                            <div class="lapoubelle">
+                                <i class="fa-light fa-trash"></i>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="itempaniershop">
+                        <div class="larowshop">
+                            <div class="nameweaponpanier">Special Carbine</div>
+                            <div class="priceweaponpanier">$99 999</div>
+                        </div>
+                        <div class="typeweaponpanier">Type : Weapon</div>
+                        <div class="larowshop">
+                            <div class="laquantity">
+                                <div class="textquantity">Quantity :</div>
+                                <div class="quantityweaponshop">9</div>
+                            </div>
+                            <div class="lapoubelle">
+                                <i class="fa-light fa-trash"></i>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="validatepanier">
+                    <div class="larowshopbasket">
+                        <div class="textbasketprice">BASKET PRICE :</div>
+                        <div class="panierprice">$99 999</div>
+                    </div>
+                    <div class="buypanier">CONFIRM BASKET</div>
+                    <div class="cancelpanier">CANCEL</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+</body>
+</html>

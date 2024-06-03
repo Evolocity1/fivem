@@ -1,0 +1,388 @@
+.leshop {
+    display: none;
+    position: relative;
+}
+
+.shop {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 90vh;
+    user-select: none;
+}
+
+.alliteminshop {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+}
+
+.paniershop {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.buttonshop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 12.5%;
+    font-size: 1vw;
+}
+
+.buyorsell {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+    height: 50%;
+}
+
+.lesellall {
+    display: flex;
+    width: 30%;
+    height: 100%;
+}
+
+.buy, .sell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    border: solid 1px #545C64;
+    border-radius: 0.4vw;
+    cursor: pointer;
+    transition: all 250ms ease-in;
+}
+
+.sellall {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: solid 1px #545C64;
+    border-radius: 0.4vw;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+}
+
+.buy:hover, .sell:hover, .weaponorvehicle:hover {
+    border: solid 1px #f9f971c0;
+}
+
+.sellall:hover {
+    background: #f9f971c0;
+}
+
+.filtreshop {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+    height: 60%;
+}
+
+.recherche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 80%;
+    border: solid 1px #545C64;
+}
+
+.weaponorvehicle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+    border: solid 1px #545C64;
+    border-radius: 0.4vw;
+    transition: all 250ms ease-in;
+    cursor: pointer;
+}
+
+.lesitems {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    position: relative;
+    width: 100%;
+    height: 87.5%;
+    overflow-x: hidden;
+}
+
+.itemshop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 26.5vh;
+    background: #16181A;
+    border-top: solid 1px #545C64;
+    font-size: 0.9vw;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.70);
+}
+
+.infoitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+}
+
+.nameitem {
+    height: 45%;
+}
+
+.typeitem {
+    height: 45%;
+    font-size: 0.8vw;
+    color: #545C64;
+}
+
+.buyitem, .sellitem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 13.5%;
+    border: solid 1px #F9F871;
+    border-radius: 1vw;
+    transition: all 250ms ease-in;
+    cursor: pointer;
+}
+
+.buyitem:hover, .sellitem:hover {
+    background: #f9f971c0;
+}
+
+#imgitemshop {
+    width: 10vw;
+}
+
+.lesitems::-webkit-scrollbar {
+    display: none;
+    }
+
+
+.infoshop {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 12.5%;
+    font-size: 1vw;
+}
+
+.lacolonneshop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+}
+
+.titleshop {
+    height: 30%;
+}
+
+.lepanier {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    position: relative;
+    width: 100%;
+    height: 67.5%;
+    overflow-x: hidden;
+}
+
+.lepanier::-webkit-scrollbar {
+    display: none;
+    }
+
+.itempaniershop {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 13vh;
+    background: #16181A;
+    border-top: solid 1px #545C64;
+    font-size: 0.9vw;
+}
+
+.itempaniershop:last-child {
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.70);
+}
+
+.larowshop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 25%;
+}
+
+.priceweaponpanier, .lapoubelle {
+    margin-left: auto;
+    margin-right: 1vw;
+}
+
+.nameweaponpanier, .textquantity, .typeweaponpanier {
+    margin-left: 1vw;
+}
+
+.typeweaponpanier, .laquantity {
+    color: #545C64;
+    font-size: 0.75vw;
+}
+
+.laquantity, .lapoubelle {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+}
+
+.validatepanier {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 17.5%;
+    font-size: 1vw;
+}
+
+.larowshopbasket {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.buypanier, .cancelpanier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+    border-radius: 1vw;
+    cursor: pointer;
+    text-shadow: 0px 0px 8px black;
+}
+
+.buypanier {
+    margin-top: 2vh;
+    background: #F9F871;
+    transition: all 250ms ease-in;
+}
+
+.buypanier:hover {
+    transform: scale(1.005);
+}
+
+.cancelpanier {
+    margin-top: 2vh;
+    border: 1px solid #545C64;
+    transition: all 200ms ease-in;
+}
+
+.cancelpanier:hover {
+    border: solid 1px #F9F871;
+}
+
+label input {
+    position:relative;
+	font-size:1vw;
+	font-weight:600;
+	width:100%;
+	height:100%;
+	background-color:transparent;
+	outline:none;
+	border:none;
+	color:white;
+	
+}
+
+.unequantity input {
+    width: 90%;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 500;
+    font-size: 0.8vw;
+    text-align: center;
+    color: #545C64;
+    background: transparent;
+    border: none;
+    outline:none;
+    float:right;
+}
+
+.unequantity input::-webkit-inner-spin-button
+{
+	-webkit-appearance:none
+}
+
+.quantityweaponshop {
+    margin-left: 0.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+}
+
+.listeplusmoins {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.plusquantity, .moinsquantity {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.unequantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background: #2C2F33;
+}
+
+.rougeprice {
+    color: #FF0000;
+}
+
+.vertprice {
+    color: #00FF1A;
+}

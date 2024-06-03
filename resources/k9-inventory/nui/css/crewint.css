@@ -1,0 +1,602 @@
+.lecrewzz {
+    display: none;
+}
+
+.lecrew {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8vw;
+    user-select: none;
+  }
+  
+  .partiegauche {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    height: 100%;
+  }
+  
+  .leplayerinfocrew {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 95%;
+    height: 17.5%;
+    border-bottom: solid 1px #545C64;
+  }
+  
+  .levelcrew {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 4vw;
+    height: 8vh;
+    border: solid 10px white;
+    border-radius: 50%;
+  }
+  
+  .allinfocrew {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-left: 1vw;
+  }
+  
+  .lesinfoplayer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30%;
+  }
+  
+  .lacolonne {
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+    height: 100%;
+  }
+  
+  .lamoney {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    width: 17%;
+    height: 100%;
+    margin-left: auto;
+  }
+  
+  .lesk9points {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    width: 17%;
+    height: 100%;
+    margin-left: auto;
+  }
+  
+  .mycrewname, .mycrewtag, .mycountrycrew, .mytotalplayercrew {
+    height: 50%;
+  }
+  
+  .myk9pointscrew {
+    height: 55%;
+  }
+  
+  .mymoneycrew {
+    height: 55%;
+  }
+  
+  .lesbuttonscrew {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    height: 30%;
+    margin-top: 1vh;
+  }
+  
+  .infoquest, .questshop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 85%;
+    border: solid 0.1vw #545C64;
+    border-radius: 0.4vw;
+  }
+  
+  
+  .mystats {
+    font-size: 1vw;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 25%;
+    border-bottom: solid 1px #545C64;
+    margin-top: 1.5vh;
+  }
+  
+  .allbuttonstats {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    height: 17.5%;
+  }
+  
+  .itemsbuttonstats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7vw;
+    width: 12.5%;
+    border-radius: 0.25vw 0.25vw 0px 0px;
+    border-top: 1px solid #545C64;
+    border-left: 1px solid #545C64;
+    border-right: 1px solid #545C64;
+    margin-right: 0.15vw;
+  }
+  
+  .lestatsplayercrew {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 25%;
+    border-radius: 0px 0px 0.25vw 0.25vw;
+    border: 1px solid #545C64;
+    background: #16181A;
+  }
+  
+  .lerankstatplayercrew {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 17.5%;
+    background: #0A0A0A;
+  }
+  
+  .lacolonnestat, .lacolonnestatcrew {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1vw;
+    width: 17.5%;
+    height: 100%;
+  }
+  
+  .larankedstat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1vw;
+    width: 17.5%;
+    height: 100%;
+    font-size: 0.7vw;
+    font-weight: 500;
+  }
+  
+  .myquests {
+    font-size: 1vw;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 55%;
+    margin-top: 1.5vh;
+  }
+  
+  
+  .kdstat {
+    font-size: 0.8vw;
+    height: 40%;
+  }
+  
+  .textstat {
+    height: 13%;
+  }
+  
+  .textquests {
+    height: 6%;
+  }
+  
+  .grise {
+    color: #545C64;
+  }
+  
+  .lejaune {
+    color: #F9F871;
+  }
+  
+  .clicker {
+    transition: all 200ms ease-in;
+    cursor: pointer;
+  }
+  
+  .clicker:hover {
+    background: rgb(29, 31, 33);
+  }
+  
+  .soustitre {
+    color: #545C64;
+    font-size: 0.65vw;
+    font-weight: 500;
+  }
+  
+  .partiedroite {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+  }
+  
+  
+  
+  .infoaccountcolonne {
+    display: flex;
+    margin-left: 2vw;
+    flex-direction: row;
+    width: 92.5%;
+    height: 100%;
+  }
+  
+  .lesbuttonsaccount {
+    display: flex;
+    margin-left: 2vw;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 92.5%;
+    height: 100%;
+  }
+  
+  .buttonrefreshkcoins {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50%;
+    border: solid 1px #545C64;
+    border-radius: 0.25vw;
+  }
+  
+  .buttonbuykcoins {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 50%;
+    border: solid 1px #545C64;
+    background: #F9F871;
+    border-radius: 0.75vw;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+  }
+  
+  .lacolonneaccountinfo {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+  }
+  
+  .colonnekcoins {
+    display: flex;
+    margin-left: auto;
+    align-items: end;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+  }
+  
+  
+  #imgaccountinfo {
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 50%;
+    border: 0.25vw solid #F9F871;
+  }
+  
+  .unecolonne {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .textcrew {
+    height: 14%;
+  }
+  
+  .monpseudoaccountcrew, .monidaccountcrew, .monnombrekcoinsaccountcrew {
+    height: 40%;
+  }
+  
+  .transactioninfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5vh;
+    width: 95%;
+    height: 35%;
+    border-bottom: solid 1px #545C64;
+    font-size: 1vw;
+    font-weight: 700;
+  }
+  
+  .lestransactions {
+    margin-top: 0.75vh;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    font-size: 0.8vw;
+  }
+  
+  .alltransactions {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 100%;
+    height: 75%;
+  
+  }
+  
+  .alltransactions::-webkit-scrollbar {
+    display: none;
+    }
+  
+  .transactionitem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 97.5%;
+    height: 20%;
+    background: #0A0A0A;
+    margin-top: 0.5vh;
+  }
+  
+  .havenottransaction {
+    display: none;
+    position: absolute;
+    top: 42.5%;
+    left: 74%;
+  }
+  
+  .colonnetransaction {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-left: 1vw;
+  }
+  
+  .colonnetransaction2 {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 0.5vw;
+  }
+  
+  .ladatetransaction, .nombrekcoinrecu {
+    height: 50%;
+  }
+  
+  .texttransaction {
+    height: 10%;
+  }
+  
+  #imgtransactionpp {
+    width: 1.75vw;
+    height: 3.5vh;
+    margin-left: 0.25vw;
+  }
+  
+  
+  .progress-ring {
+    margin-left: 0.5vw;
+    width: 6vw;
+    height: 12vh;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3vw;
+    color: #fff;
+  }
+  
+  .level-text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.5vw;
+    color: #545C64;
+    height: 20%;
+  }
+  
+  .progress {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .progress .track,
+  .progress .fill {
+    fill:#0B0C0D;
+    stroke-width: 4;
+  }
+  
+  .progress .fill {
+    stroke: #F9F871; /* Couleur de remplissage du cercle */
+    stroke-dasharray: calc(2 * 3.14 * 35); /* Circonférence du cercle */
+    stroke-dashoffset: calc((100 - var(--percentage)) / 100 * (2 * 3.14 * 35));
+    transform-origin: center;
+    transform: rotate(90deg); /* Rotation pour partir dans le sens des aiguilles d'une montre */
+  }
+
+  .playerinfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5vh;
+    width: 95%;
+    height: 95%;
+    border-bottom: solid 1px #545C64;
+    font-size: 1vw;
+    font-weight: 700;
+  }
+  
+  .allplayerinfo {
+    display: flex;
+    margin-top: 2vh;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: 0.8vw;
+  }
+
+  .textcrewplayer {
+    height: 3.75%;
+  }
+
+  .itemplayerlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #0A0A0A;
+    width: 100%;
+    height: 7%;
+  }
+
+  #imgplayerlist {
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    width: 2vw;
+    height: 2vw;
+  }
+
+  .lacolonneplayerinfo {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .textcolonneplayerinfo {
+    height: 40%;
+  }
+
+  .buttonmanage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 50%;
+    background: #FFF500;
+    border-radius: 1vw;
+    text-shadow: 0px 0px 8px black;
+    cursor: pointer;
+    transition: all 250ms ease-in;
+  }
+
+  .buttonmanage:hover {
+    transform: scale(1.02);
+  }
+
+  .isplayeronline {
+    display: flex;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+  }
+
+  .online {
+    background: #52FF00;
+  }
+
+ .offline {
+    background: #FF0000;
+  }
+  .manageplayercrew {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 66.5%;
+    transform: translateY(-50%);
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30vw;
+    height: 50vh;
+    background: #0A0A0A;
+  }
+
+  .limgmanagerplayercrew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+  }
+
+  .actionmanageplayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+  }
+
+  .uniquekick , .autreaction{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    height: 100%;
+  }
+
+  .demotemanage, .promotemanage, .kickmanage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60%;
+    border-radius: 1vw;
+    text-shadow: 0px 0px 8px black;
+    cursor: pointer;
+    transition: all 250ms ease-in;
+  }
+
+  .demotemanage:hover, .promotemanage:hover, .kickmanage:hover {
+    transform: scale(1.02);
+  }
+
+  #manageplayercrewimg {
+    width: 8vw;
+    height: 8vw;
+    
+  }

@@ -1,0 +1,2475 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+
+
+.hidden {
+    display: none;
+}
+
+
+:root {
+    --green: #3dde98d8;
+    --green-shadow: 0px 4px 6px #3dde987e;
+
+    --red: #db0707d8;
+    --red-shadow: 0px 4px 6px #db07077e;
+
+    --gray: rgba(30, 28, 28, 0.85);
+    --gray-shadow: 0px 4px 6px rgba(30, 28, 28, 0.5);
+
+    --yellow: #999906;
+
+    --yellowassist: #b9b910d8;
+    --yellowassist-shadow: 0px 4px 6px #b9b9107e;
+
+    --case: rgba(30, 28, 28, .65);
+    --border: #393939;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    isolation: isolate;
+    margin: 0;
+}
+
+.killfeedtamere {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+
+
+    user-select: none;
+}
+
+.killfeed {
+    position: relative;
+    width: fit-content;
+    height: 3vh;
+    border-radius: .1vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5vh;
+    padding: .5vh;
+    margin-block-end: 1.5vh;
+    margin-right: 1vh;
+}
+
+.killfeed-main {
+    position: relative;
+    width: fit-content;
+    height: 2vh;
+    border-radius: .2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5vh;
+    background-color: var(--gray);
+    box-shadow: var(--gray-shadow);
+    padding: .5vh;
+}
+
+.killfeed-main.my-kill {
+    background: var(--green);
+    box-shadow: var(--green-shadow);
+}
+
+.killfeed-main.my-death {
+    background: var(--red);
+    box-shadow: var(--red-shadow);
+}
+
+.killfeed-main.my-assist {
+    background: var(--yellowassist);
+    box-shadow: var(--yellowassist-shadow);
+}
+
+.attacker-pp, .victim-pp {
+    width: 1.5vh;
+    margin-left: .25vh;
+    border-radius: .25vh;
+}
+
+.attacker-name, .victim-name {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.attacker-name > span, .victim-name > span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vh;
+    color: white;
+}
+
+.weapon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 1vh;
+}
+
+.weapon-image {
+    height: 1.75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kill-distance {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5vh;
+    padding-right: .25vh;
+}
+
+.kill-distance > span {
+    color: #fff;
+    font-size: 1.5vh;
+}
+
+.kill-distance > i {
+    margin-top: .25vh;
+    color: #fff;
+    font-size: 1.25vh;
+}
+
+.kill-information {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+
+.kill-information i {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.kill-information span {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+    width:  2vh;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25vh;
+}
+
+.distance, .combo {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.distance i, .combo i {
+    color: #fff;
+    font-size: 1vh;
+}
+
+.distance span, .combo span {
+    color: #fff;
+    font-size: 1vh;
+    margin-top: -1vh;
+}
+
+
+.progressbarmec {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#progress {
+    top: 90%;
+    background: var(--case);
+    justify-content: flex-start;
+    box-sizing: border-box;
+    border-radius: .1vw;
+    /* border: solid 1px rgba(23, 23, 23, 0.75); */
+    align-items: center;
+    position: fixed;
+    /* padding: 0 2px; */
+    /* display: flex; */
+    font-size: 3vw;
+    height: 5vh;
+    width: 25vw;
+    box-shadow: 0 10px 40px -10px var(--yellow);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 54px 55px, rgba(0, 0, 0, 0.2) 0px -12px 30px, rgba(0, 0, 0, 0.2) 0px 4px 6px, rgba(0, 0, 0, 0.23) 0px 12px 13px, rgba(0, 0, 0, 0.12) 0px -3px 5px;
+}
+#progress-text {
+    color: white;
+    width: fit-content;
+    font-size: 1vw;
+    font-weight: 700;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#progress-value {
+    /* animation: load 5s normal forwards; */
+    border-radius: 1px;
+    height: 5vh;
+    width: 0%;
+}
+
+.color {
+    box-shadow: 0 10px 40px -10px var(--yellow);
+    background: var(--yellow);
+}
+
+@keyframes glow {
+    /*0% {*/
+      /* width: 5%; */
+    /*}*/
+  
+    /*100% {*/
+      /* width: 100%; */
+    /*  box-shadow: 0 10px 40px -10px var(--yellow);*/
+    /*  box-shadow: 0 0 40px var(--yellow);*/
+    /*}*/
+}
+
+@keyframes load {
+    0% { width: 5%; }
+    100% { width: 100%; }
+}
+
+.hud {
+    position: absolute;
+    width:15vw;
+    height:5vh;
+    top: 95%;
+    left: 90vw;
+    transform: translate(-50%, -50%);
+    background: rgba(30, 28, 28, 0.2);
+}
+
+.hud .player-health-infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 90%;
+}
+
+
+.hud .player-health-infos .player-hp-bar {
+    position: relative;
+    width: 90%;
+    height: 1.2vh;
+    background: var(--case);
+    margin-bottom: 0.2vh;
+}
+
+.hud .player-health-infos .player-hp-bar .progress {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.4);
+    transition: width 0.25s;
+}
+
+.hud .player-health-infos .player-armor-bar {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 0.8vh;
+    width: 90%;
+    height: 1.2vh;
+    gap: 0.8vh;
+}
+
+.hud .player-health-infos .player-armor-bar .armor-plate {
+    position: relative;
+    width: 8vh;
+    height: 100%;
+    background: var(--case);
+}
+
+.fill {
+    display: flex;
+    position: relative;
+    width: var(--percentage);
+    height: 100%;
+    background: #F9F871;
+}
+
+
+
+.killcam {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 30vw;
+    height: 10vh;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--case);
+    border: 0.1vw solid var(--border);
+}
+
+
+.killcam-middle {
+    position: relative;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    flex-direction: column;
+    width: 30vw;
+    height: 10vh;
+}
+
+.killcam-username {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: row;
+    width: 18vw;
+    height: 4vh;
+    color: white;
+}
+
+.killcam-username p {
+    font-size: 0.8vw;
+    font-weight: 700;
+}
+
+.killcam-hud {
+    display: flex;
+    width: 18vw;
+    height: 5vh;
+}
+
+
+
+.killcam-pp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 10vw;
+    height: 10vh;
+}
+
+.killcam-pp img {
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 50%;
+    border: 0.1vw solid var(--yellow);
+}
+
+.killcam-weapon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 1%;
+    margin-bottom: 8%;
+}
+
+.killcam-weapon img {
+    width: 6.3vw;
+    height: 2.8vw;
+}
+
+
+
+.killcam-hud .killcam-player-bar {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 90%;
+    width: 100%;
+}
+
+
+.killcam-hud .killcam-player-bar .killcam-health-bar {
+    position: relative;
+    width: 90%;
+    height: 1.2vh;
+    background: var(--case);
+    margin-bottom: 0.2vh;
+}
+
+.killcam-hud .killcam-player-bar .killcam-health-bar .killcam-progress {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.4);
+    transition: width 0.25s;
+}
+
+.killcam-hud .killcam-player-bar .killcam-armor-bar {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 0.8vh;
+    width: 90%;
+    height: 1.2vh;
+    gap: 0.8vh;
+}
+
+.killcam-hud .killcam-player-bar .killcam-armor-bar .killcam-armor-plate {
+    position: relative;
+    width: 8vh;
+    height: 100%;
+    background: var(--case);
+}
+
+.killcam-fill {
+    display: flex;
+    position: relative;
+    width: var(--percentage);
+    height: 100%;
+    background: #F9F871;
+}
+
+
+
+
+.redzone-killleader {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    left: 50%;
+    top: 90%;
+    background-color: #16181aea;
+    transform: translate(-50%);
+    width: 17%;
+    height: 7.25%;
+    color: white;
+    font-size: 0.75vw;
+    font-weight: 700;
+
+}
+
+.infokillleader, .statskillleader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.statskillleader {
+    font-size: 0.85vw;
+}
+
+.redzone-killleader-kills {
+
+}
+
+#crane {
+    width: 0.95vw;
+}
+
+
+
+
+.teleport-container {
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:100vw;
+    height: 100vh;
+    align-items: center;
+    background: rgba(22,24,26, 0.9);
+    user-select: none;
+}
+
+.titleteleport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    color: white;
+    font-size: 2.5vw;
+    font-weight: 700;
+}
+
+.allteleport {
+    margin-top: 15vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    grid-column-gap: 2vw;
+    position: relative;
+    width: 50vw;
+    height: 54vh;
+    overflow-y: hidden;
+}
+.teleportitem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    background: #16181A;
+    border-top: solid 1px #545C64;
+    width: 17.96875vw;
+    height: 50.592592592593vh;
+    font-size: 1.75vw;
+    color: white;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.70);
+    font-weight: 700;
+}
+
+.lebackgroundimage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.paleto {
+    background-image: url(assets/safezonepaleto.png);
+}
+
+.titlesafezone {
+    margin-bottom: 1.5vh;
+}
+
+.buttonteleport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 7.5%;
+    font-size: 1vw;
+    border: 1px solid #F9F871;
+    border-radius: 1vw;
+    margin-bottom: 4vh;
+    cursor: pointer;
+    transition: all 250ms ease-in;
+    text-shadow: 0px 0px 8px black;
+    font-weight: 600;
+}
+
+.buttonteleport:hover {
+    background: #f9f971c0;
+}
+
+.allteleport::-webkit-scrollbar {
+    height: 0.3vw;
+    }
+    
+    .allteleport::-webkit-scrollbar-track {
+        background: #2E3135;
+    }
+    
+    .allteleport::-webkit-scrollbar-thumb {
+    background:#f9f971; 
+    border-radius: 1vw;
+    }
+    
+    .allteleport::-webkit-scrollbar-thumb:hover {
+    background:#f9f971;
+}
+
+
+
+.dialog {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: top;
+    left: 50%;
+    top: 90%;
+    background-color: var(--case);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 20%;
+    color: white;
+    font-size: 1.5vh;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.5vh 0;
+}
+
+.dialog .dialog-namepnj {
+    font-size: 2.8vh;
+    font-weight: 700;
+}
+
+.male {
+    color: royalblue;
+}
+
+.female {
+    color: hotpink;
+}
+
+.dialog-choices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    width: 100%;
+    height: 60%;
+}
+
+.dialog-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    justify-content: space-around;
+    gap: 2vh;
+    padding: .5vh;
+    height: 20%;
+    background-color: var(--case);
+    border: 0.1vw solid var(--border);
+    cursor: pointer;
+}
+
+.males:hover {
+    background-color: rgba(65, 105, 225, 0.500);
+    border: 0.1vw solid royalblue;
+    box-shadow: 0px 0px 10px 0px royalblue;
+}
+
+.females:hover {
+    background-color: rgba(255, 105, 180, 0.500);
+    border: 0.1vw solid hotpink;
+    box-shadow: 0px 0px 10px 0px hotpink;
+}
+
+
+
+
+
+.shop {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 28, 28, .40);
+}
+
+.barreshop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 10vh;
+    width: 100vw;
+    font-size: 1vw;
+    height: 8vh;
+    border-bottom: 1px solid #717171;
+    background: rgba(30, 28, 28, 0.60);
+    color: white;
+}
+
+.buy {
+    margin-left: 1vw;
+}
+
+.justepourselect {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 6vh;
+}
+
+.selectactionshop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1vw;
+    border-radius: 0.5vw;
+    width: 5vw;
+    height: 5vh;
+    background: rgba(30, 28, 28, 0.60);
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+.weaponorvehicle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1vw;
+    border-radius: 0.5vw;
+    width: 6vw;
+    height: 5vh;
+    background: rgba(30, 28, 28, 0.60);
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+.weaponorvehicle:hover {
+    background: rgba(30, 28, 28, 0.90);
+}
+
+
+.justepourchoisir {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 6vh;
+}
+
+#ntm {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+label input {
+    position:relative;
+	font-size:1vw;
+	font-weight:600;
+	width:90%;
+	height:100%;
+	background-color:transparent;
+	outline:none;
+	border:none;
+	color:#aeaeae;
+	float:right
+}
+
+.selectactionshop:hover {
+    background: rgba(30, 28, 28, 0.90);
+}
+
+.activeselectshop {
+    background: #f9f971a2;
+}
+
+.activeselectshop:hover {
+    background: #f9f971a2;
+}
+
+.allshop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.allitemshop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 99%;
+    margin-left: 1%;
+    margin-top: 1%;
+    height: 99%;
+    overflow-y: auto;
+}
+
+.itemshop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 1vw;
+    font-weight: 900;
+    width: 14%;
+    height: 40%;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    border-radius: 2px;
+    border: 1px solid #393939;
+    background: rgba(30, 28, 28, 0.60);
+}
+
+.forbuy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    font-size: 0.9vw;
+    text-align: center;
+    background: rgba(30, 28, 28, 0.50);
+    border: 1px solid #717171;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.forbuy:hover {
+    background: #f9f971a2;
+}
+
+.nbshop {
+    display: flex;
+    background: rgba(30, 28, 28, 0.05);
+    flex-direction: row;
+}
+
+.plusshop {
+    width: 3vw;
+    text-align: center;
+    background: rgba(30, 28, 28, 0.60);
+    border: 1px solid #717171;
+    margin-right: 2vw;
+    cursor: pointer;
+}
+
+.moinshop {
+    width: 3vw;
+    text-align: center;
+    background: rgba(30, 28, 28, 0.60);
+    border: 1px solid #717171;
+    margin-left: 2vw;
+    cursor: pointer;
+}
+
+.sellall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 63vw;
+    border-radius: 0.5vw;
+    width: 5vw;
+    height: 5vh;
+    background: #f9f971a2;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+.sellall:hover {
+    background: #f9f971cc;
+}
+
+input {
+    width: 90%;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 0.9vw;
+    text-align: center;
+    color: white;
+    background: transparent;
+    border: none;
+    outline:none;
+    float:right;
+}
+
+input::-webkit-inner-spin-button
+{
+	-webkit-appearance:none
+}
+
+
+#imginshop {
+    width: 12vw;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    }
+    
+    ::-webkit-scrollbar-track {
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    background:transparent; 
+    border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+    background:transparent; 
+}
+
+
+
+.pressf3 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    height: 4vh;
+    top: 30%;
+    left: -1%;
+    border: 1px solid #FFF;
+    background: rgba(49, 49, 49, 0.60);
+    color: white;
+    font-size: 0.8vw;
+}
+
+.showdiffcult {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 15vw;
+    height: 20vh;
+    left: 85%;
+    background: rgba(39, 39, 39, 0.80);
+    color: white;
+    border-radius: 0px 0px 0px 1vw;
+}
+
+.showdiffcultitem {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.parametreentrianement {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 25vh;
+    background: rgba(39, 39, 39, 0.80);
+}
+
+.arme {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 4vw;
+    transition: all 200ms ease;
+    cursor: pointer;
+}
+
+.laborder {
+    display: flex;
+    height: 100%;
+    width: 1%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.parametreentrianement .easy {
+    background: rgba(0, 255, 26, 0.40);
+} 
+
+.parametreentrianement .medium {
+    background: rgba(255, 245, 0, 0.40);
+} 
+
+.parametreentrianement .hard {
+    background: rgba(255, 0, 0, 0.40);
+}
+
+.titlediffculte {
+    position: absolute;
+    font-size: 1.5vw;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.squad {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 38vw;
+    height: 60vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.barrehautsquad {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    background: #131517;
+    color: white;
+    font-size: 0.75vw;
+}
+
+.mysquad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+    width: 15%;
+    height: 4vh;
+    border: solid 1.5px #FFE600;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+.joinsquad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+    width: 30%;
+    height: 4vh;
+    border: solid 1.5px #FFE600;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+.activehautsquad {
+    background: #FFE600;
+}
+
+.mysquad:hover  {
+    background: #1b1e20;
+}
+
+.joinsquad:hover  {
+    background: #1b1e20;
+}
+
+.activehautsquad:hover {
+    background: #FFE600;
+}
+
+
+.barrebassquad {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 5%;
+    background: #131517;
+    width: 100%;
+    height: 85%;
+}
+
+.donthavesquad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background: #131517;
+    width: 100%;
+    height: 100%;
+}
+
+.createsquad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background: #FFE600;
+    margin-top: 1vh;
+    width: 27%;
+    height: 8%;
+    border-radius: 1.5vw;
+    cursor: pointer;
+    font-size: 0.75vw;
+}
+
+.lasquad {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.mysquadinsquad {
+    margin-top: 0.75vw;
+    margin-left: 1vw;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 0.9vw;
+    width: 20%;
+    height: 7.5%;
+}
+
+.allmemberinsquad {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #292A2B;
+    width: 95%;
+    height: 45%;
+    font-size: 0.75vw;
+}
+
+.membersquaditem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 25%;
+    background: #0E1011;
+}
+
+.usernameplayerquad {
+    margin-left: 1vw;
+}
+
+.actionplayersquad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 1vw;
+    width: 12.5%;
+    height: 75%;
+    background: #1B1B1B;
+    border: solid 1px #FFE600;
+    transition: all 200ms ease-in;
+}
+
+.actionplayersquad:hover {
+    background-color: #FFE600;
+}
+
+.additemsquad {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 25%;
+}
+
+.addsquad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 1vw;
+    width: 12.5%;
+    height: 75%;
+    background: #FFE600;
+    border-radius: 0.3vw;
+}
+
+.textoption {
+    display: flex;
+    align-self: start;
+    margin-top: 0.75vw;
+    margin-left: 1vw;
+    font-size: 0.9vw;
+    height: 7.5%;
+}
+
+.alloption {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75vw;
+    width: 95%;
+}
+
+.private {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.textprivate {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+}
+
+.letextprivate {
+    height: 40%;
+}
+
+.putsquad {
+    color: #909090;
+    font-size: 0.6vw;
+}
+
+.lacheckbox {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 3%;
+    height: 75%;
+    
+    
+}
+
+#privatequad {
+    cursor: pointer;
+}
+
+
+.fa-user {
+    margin-right: 0.25vw;
+}
+
+.deletesquad {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4vh;
+}
+
+.textdelete {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+}
+
+.textdeletesquad {
+    height: 40%;
+}
+
+.textdeleteyoursquad {
+    color: #909090;
+    font-size: 0.6vw;
+}
+
+.buttondeletesquad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFE600;
+    background: #1B1B1B;
+    width: 15%;
+    height: 75%;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+.buttondeletesquad:hover {
+    background: #FFE600;
+}
+
+.forjoinsquad {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 0.75vw;
+}
+
+.textpublicsquad {
+    display: flex;
+    align-self: start;
+    margin-top: 0.75vw;
+    margin-left: 1vw;
+    font-size: 0.9vw;
+    margin-bottom: 1vh;
+}
+
+.allsquad {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 95%;
+    height: 85%;
+}
+
+.squaditem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 11%;
+    background: #0C0C0D;
+    margin-top: 1vh;
+}
+
+#imgsquad {
+    width: 1.8vw;
+    height: 3.6vh;
+    margin-left: 0.25vw;
+}
+
+.alltextnamesquad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0.75vw;
+    width: 80%;
+    height: 100%;
+}
+
+.namesquad {
+    height: 45%;
+    font-size: 0.8vw;
+}
+
+.membersquad {
+    color: #909090;
+    font-size: 0.65vw;
+}
+
+.joinsquaditem {
+    display: flex;
+    align-items: center;
+    border-radius: 0.2vw;
+    border: 1px solid #FFE600;
+    background: #1B1B1B;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 1vw;
+    width: 10%;
+    height: 75%;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+.joinsquaditem:hover {
+    background: #FFE600;
+}
+
+
+.hudsquad {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 11.71875vw;
+    height: 21vh;
+    top: 10%;
+    left: 2%;
+}
+
+.allmemberinsquadhud {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.memberhuditem {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5vh;
+    margin-top: 0.25vh;
+    background: rgba(12,12,12,0.5);
+    align-items: center;
+}
+
+#imghudsquad {
+    width: 1.9vw;
+    height: 3.8vh;
+    margin-left: 0.4vw;
+}
+
+.allinfomemberhudsquad {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    margin-left: 0.4vw;
+    margin-bottom: 0.5vh;
+    height: 100%;
+}
+
+.player-armor-bar-squad {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 15%;
+    gap: 0.4vh;
+}
+
+.armor-plate-squad {
+    display: flex;
+    width: 25%;
+    height: 100%;
+    background: var(--case);
+}
+
+.fill-squad {
+    display: flex;
+    position: relative;
+    width: var(--percentage);
+    height: 100%;
+    background: #F9F871;
+}
+
+.player-hp-bar-squad {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 15%;
+    background: var(--case);
+    margin-top: 0.3vh;
+}
+
+.progress-squad {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffff;
+}
+
+.pseudohudsquad {
+    height: 55%;
+}
+
+
+
+
+
+
+
+
+
+.trade {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(19, 21, 23, 0.90);
+    color: white;
+    font-size: 1vw;
+    user-select: none;
+}
+
+.partiegauchetrade {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 90%;
+    margin-left: 2.5vh;
+}
+
+.partiedroitetrade {
+    margin-top: 10vh;
+    margin-right: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 90%;
+}
+
+.myoffer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    background: #131517;
+    transition: all 200ms ease-in;
+}
+
+.allmyoffer {
+    display: flex;
+    flex-direction: column;
+    width: 92.5%;
+    height: 92.5%;
+}
+
+.rangerrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 9%;
+    margin-bottom: 0.25vh;
+}
+
+.mykcoinstrade, .mymoneytrade, .tradekcoinstrade, .tradermoneytrade {
+    width: 25%;
+    height: 90%;
+    background: #1A1D1F;
+}
+
+.profiltrade {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    font-size: 0.75vw;
+}
+
+.soustitre {
+    color: #545C64;
+    font-size: 0.65vw;
+}
+
+.larowtrade {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 1vw;
+}
+
+.lacolonnetrade {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-right: 2vw;
+}
+
+#mypptrade, #traderpptrade {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+}
+
+.textyouroffer {
+    display: flex;
+    align-self: start;
+}
+
+.textyouroffertrader {
+    display: flex;
+    align-self: start;
+}
+
+.lesoffer {
+    margin-top: 2vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    position: relative;
+    width: 100%;
+    height: 75%;
+    overflow-x: hidden;
+}
+
+.itemoffer {
+    position: relative;
+    width: 95%;
+    height: 12vh;
+    background: rgba(174, 174, 174, 0.05);
+    border: 1px solid rgba(174, 174, 174, 0.2);
+}
+
+.image-bg {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    /* background: var(--case) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--white-30); */
+    box-sizing: border-box;
+    z-index: 3;
+    /* border-radius: 0.7vh 0; */
+    object-fit: scale-down;
+  }
+  
+  
+  .image-bg img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-bottom: 1vh;
+    transform: translate(-50%, -50%);
+    width: 7vw;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+  }
+  
+  .item-slot-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0vh;
+    width: 100%;
+    height: 25%;
+    border-top: 0.1vw solid #696B6D;
+    background-color: #13171C;
+  }
+  .item-slot-info h1 {
+    position: absolute;
+    width: 70%;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.5vh;
+    font-weight: 700;
+    margin: 7px;
+    color: #696B6D;
+  }
+  .item-count {
+    position: relative;
+    width: 100%;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.5vh;
+    font-weight: 700;
+    
+    margin: 7px;
+    color: #696B6D;
+  }
+
+  .textyourinventory {
+    display: flex;
+    align-self: start;
+  }
+
+  .clicker {
+    cursor: pointer;
+  }
+
+  .myinventory {
+    margin-top: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+    background: #131517;
+}
+
+.moninventory {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 92.5%;
+    height: 90%;
+}
+
+.allinventory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.myitemtrade {
+    position: relative;
+    width: 95%;
+    height: 12vh;
+    background: rgba(174, 174, 174, 0.05);
+    border: 1px solid rgba(174, 174, 174, 0.2);
+}
+
+.traderoffer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    background: #131517;
+}
+
+.alltraderoffer {
+    display: flex;
+    flex-direction: column;
+    width: 92.5%;
+    height: 92.5%;
+}
+
+.alltraderinventory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.itemoffertrader {
+    position: relative;
+    width: 95%;
+    height: 12vh;
+    background: rgba(174, 174, 174, 0.05);
+    border: 1px solid rgba(174, 174, 174, 0.2);
+}
+
+.myitemtradedutrader {
+    position: relative;
+    width: 95%;
+    height: 12vh;
+    background: rgba(174, 174, 174, 0.05);
+    border: 1px solid rgba(174, 174, 174, 0.2);
+}
+
+.lesoffertrader {
+    margin-top: 2vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    position: relative;
+    width: 100%;
+    height: 75%;
+    overflow-x: hidden;
+}
+
+
+.partiemilieutrade {
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 15%;
+    height: 90%;
+}
+
+.allmilieutrade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 60%;
+}
+
+.rondappendtrade {
+    display: flex;
+    width: 4vw;
+    height: 4vw;
+}
+
+.lerondtrade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #131517;;
+    border-radius: 50%;
+}
+
+.timertrade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 3vw;
+    height: 3vw;
+    border: 0.2vw solid #545C64;
+    border-radius: 50%;
+    color: #545C64;
+    font-size: 0.8vw;
+}
+
+.decomptetimertrade {
+    font-size: 1vw;
+    height: 40%;
+}
+
+.lesbuttonacceptorrefusetrade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+.accepttrade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 20%;
+    border: 1px solid #E3D340;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0.13%, rgba(180, 166, 37, 0.11) 33.38%, rgba(223, 206, 46, 0.38) 99.88%);
+}
+
+.canceltrade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 20%;
+    border: 1px solid #D85050;
+    margin-top: 2vh;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(188, 60, 60, 0.06) 24.5%, rgba(225, 71, 71, 0.36) 100%);
+}
+
+.letexttrade {
+    margin-top: 2vh;
+    color: #545C64A6;
+}
+
+.mykcoinstrade, .mymoneytrade, .tradekcoinstrade, .tradermoneytrade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mykcoinstrade > input, .mymoneytrade > input {
+    width: 75%;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 0.9vw;
+    text-align: start;
+    color: white;
+    background: transparent;
+    border: none;
+    outline:none;
+    float:right;
+    margin-left: 0.5vw;
+}
+
+.nbmoneytrade, .nbkcoinstrade {
+    width: 75%;
+    font-size: 0.9vw;
+    margin-left: 0.5vw;
+}
+
+.textmoneytrade {
+    color: #5E5E5E;
+    margin-right: 0.5vw;
+}
+
+.backred {
+    background: linear-gradient(90deg, #FFF 0%, #D15959 41%, #E14747 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.backgreen {
+   	background: linear-gradient(270deg, #3CBC49 0%, #83D48B 36.5%, #78D181 58%, #FFF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+.messagedeletevehicle {
+    top: 3%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly   ;
+    transform: translate(-50%);
+    left: 50%;
+    width: 30.208vw;
+    height: 11.667vh;
+    background: linear-gradient(180deg, rgba(19, 21, 23, 0.60) 0%, rgba(23, 23, 19, 0.60) 100%);
+    color: white;
+    border-bottom: 0.3vw solid #F9F871;
+    font-weight: 600;
+    font-size: 0.8vw;
+    user-select: none;
+}
+
+.text1 {
+    font-size: 1vw;
+    margin-top: 1vh;
+}
+
+.text3{
+    height: 30%;
+}
+
+.text2 {
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.shopk9 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    height: 70vh;
+    background: #16181A;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1vw;
+    color: white;
+    user-select: none;
+}
+
+.k9logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+#ppk9 {
+    width: 5.57vw;
+    height: 5.57vw;
+    margin-left: auto;
+    margin-left: 55vw;
+}
+
+.containershopk9 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    height: 90%;
+    border-radius: 0px 0px 1vw 1vw;
+}
+
+.barreshopk9 {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 47.5%;
+    border-bottom: 1px solid #545C64;
+}
+
+.itemcategory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2vh;
+    height: 4.5vh;
+    border-radius: 0.25vw;
+    border: 1px solid #545C64;
+    font-size: 1vw;
+    color: #545C64;
+    transition: all ease-in 250ms;
+    cursor: pointer;
+
+    
+}
+
+.itemcategory:hover {
+    opacity: 1;
+    border: solid 1px #F9F871;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 35%;
+}
+
+.myprofilshopk9 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    height: 13%;
+}
+
+.titlebarreshopk9 {
+    font-size: 1.1vw;
+    margin-bottom: 3vh;
+}
+
+.titlebarreshoplinksk9 {
+    font-size: 1.1vw;
+    margin-bottom: 2.5vh;
+}
+
+.titleitembarreshopk9 {
+    font-size: 1.1vw;
+    margin-bottom: 1.5vh;
+}
+
+.links {
+    margin-top: 2.5vh;
+}
+
+.nbkcoinsshopk9, .iduniqueshopk9 {
+    color: #F9F871;
+    font-size: 0.75vw;
+    height: 30%;
+}
+
+.iduniqueshopk9 {
+    color: white;
+}
+.soustitreshopk9 {
+    font-size: 0.7vw;
+    color: #545C64;
+}
+
+.lacolonneshopk9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 30%;
+    height: 100%;
+}
+
+#ppsteamshopk9 {
+    border-radius: 50%;
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-bottom: 0.25vh;
+    margin-right: 0.5vw;
+}
+.allobject {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 97.5%;
+}
+
+.allcaseshopk9 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    grid-column-gap: 1vw;
+    grid-row-gap: 0.75vw;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.caseshopk9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 95%;
+    height: 26vh;
+    background: #141617;
+    border: 1px solid #545C64;
+    border-radius: 0.75vw;
+}
+
+.infoitemshopk9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    font-size: 0.95vw;
+}
+
+.titlearmeshopk9 {
+    height: 35%;
+}
+
+.typeweaponshopk9 {
+    height: 32.5%;
+    color: #545C64;
+    font-size: 0.8vw;
+}
+
+.nbkcoiensshopk9 {
+    height: 30%;
+    
+}
+
+#litemcaseshopk9 {
+    width: 10vw;
+}
+
+.textkcoinsshopk9 {
+    font-size: 0.8vw;
+}
+
+.imageptn {
+    height: 4vh;
+}
+
+.buttonbuyshopk9 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #F9F871;
+    width: 50%;
+    height: 12.5%;
+    border-radius: 1vw;
+    transition: all 250ms ease-in;
+    font-size: 0.9vw;
+    cursor: pointer;
+}
+
+.buttonbuyshopk9:hover {
+    background: #f9f971c0;
+
+}
+
+.allcaseshopk9::-webkit-scrollbar {
+    width: 0.2vw;
+    }
+    
+    .allcaseshopk9::-webkit-scrollbar-track {
+        background: #2E3135;
+    }
+    
+    .allcaseshopk9::-webkit-scrollbar-thumb {
+    background:#f9f971; 
+    border-radius: 1vw;
+    }
+    
+    .allcaseshopk9::-webkit-scrollbar-thumb:hover {
+    background:#f9f971;
+}
+
+
+.streamerk9 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: space-around;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #16181A;
+    width: 40vw;
+    height: 55vh;
+    color: white;
+    font-size: 1.25vw;
+    border-radius: 1vw;
+}
+
+.allstreamer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.streameritem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 97.5%;
+    height: 17.5%;
+    font-size: 0.9vw;
+    background: #141617;
+    border: solid 1px #545C64;
+    border-radius: 0.5vw;
+    transition: all 250ms ease-in;
+    margin-bottom: 2vh;
+}
+
+.streameritem:hover {
+    border-color: #F9F871;
+}
+.streamer1 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: fit-content;
+}
+
+.streamer2 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: 17.5%;
+}
+
+.buttonview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 45%;
+    border: solid 1px #F9F871;
+    border-radius: 1vw;
+    transition: all 250ms ease-in;
+    text-shadow: 0px 0px 8px black;
+    cursor: pointer;
+}
+
+.buttonview:hover {
+    background: #F9F871C0;
+}
+
+
+.lacolonnestreamer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0.75vw;
+    height: 100%;
+    width: fit-content;
+}
+
+.pseudostreamer {
+    height: 35%;
+}
+
+.titlestreamerk9 {
+    height: 5%;
+}
+
+.instreaming {
+    color: #F9F871;
+}
+
+.notstreaming  {
+    color: #FF0000;
+}
+
+#ppsteamstreamer {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    margin-left: 0.75vw;
+}
+
+.allstreamer::-webkit-scrollbar {
+    width: 0.2vw;
+    }
+    
+    .allstreamer::-webkit-scrollbar-track {
+        background: #2E3135;
+    }
+    
+    .allstreamer::-webkit-scrollbar-thumb {
+    background:#f9f971; 
+    border-radius: 1vw;
+    }
+    
+    .allstreamer::-webkit-scrollbar-thumb:hover {
+    background:#f9f971;
+}
+
+.kitmenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+    height: 65vh;
+    background: rgb(35, 32, 32);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #676767;
+    font-weight: 700;
+    font-size: 1vw;
+    user-select: none;
+}
+
+.barrekitmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    background: rgb(30, 28, 28);
+    border-bottom: solid 1px #676767;
+}
+
+.buttonclosekitmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 50%;
+    border: solid 1px #676767;
+    margin-right: 1vw;
+    transition: all 250ms ease-in;
+    cursor: pointer;
+}
+
+.buttonclosekitmenu:hover {
+    border: solid 1px #FF0000;
+}
+
+.titlekitmenu {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2.5vw;
+}
+
+#logok9kitmenu {
+    width: 3.5vw;
+    height: 3.5vw;
+}
+
+.hoverborderjaune {
+    transition: all 250ms ease-in;
+    cursor: pointer;
+}
+
+.hoverborderjaune:hover {
+    border: solid 1px #F9F871;
+}
+
+.leskits {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.allkit {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+    align-content: flex-start !important;
+    align-items: flex-start !important;
+    grid-column-gap: 1.5vw;
+    grid-row-gap: 1.5vw;
+    position: relative;
+    width: 95%;
+    height: 95%;
+    overflow-x: hidden;
+    
+}
+
+.kititem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: 23vh;
+    border: solid 1px #676767;
+    background: #1E1C1C;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.70);
+    font-size: 1.2vw;
+}
+
+.buttonclaimkitmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 12.5%;
+    border: solid 1px #676767;
+    font-size: 1vw;
+}
+#imgkititem {
+    width: 6vw;
+    height: 6vw;
+}
+
+.bikers {
+    background-image: url(assets/safezonebikers.png);
+}
+
+.pc {
+    background-image: url(assets/safezonepc.png);
+}
+
+.paleto {
+    background-image: url(assets/safezonennord.png);
+}
+
+.motel {
+    background-image: url(assets/safezonemotel.png);
+}
+
+.cheaterworld {
+    position: absolute;
+    top: 90%;
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    color: white;
+    font-size: 1vw;
+    background: linear-gradient(0deg, #ff00005e 20%, transparent 100%);
+}
+
+.banid {
+    font-size: 0.9vw;
+    height: 27.5%;
+}
+
+/*# sourceMappingURL=style.css.map */

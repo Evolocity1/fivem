@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>K9-PVPUI</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css.map">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' crossorigin='anonymous' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/regular.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+    <div class="killfeedtamere">
+        <!-- <div class="killfeed" data-columnid="${columnId}">
+            <div class="kill-information">
+                <div class="distance">
+                    <span>242M</span>
+                    <div class="icon">
+                        <i class="fa-solid fa-people-arrows"></i>
+                    </div>
+                </div>
+                <div class="combo">
+                    <span>6x</span>
+                    <div class="icon">
+                        <i class="fa-solid fa-skull-crossbones"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="killfeed-main my-assist" data-killer="${data.attackerId}" data-deader="${data.victimId}" data-assist="${data.assistId}">
+                <img class="attacker-pp" src="https://images-ext-2.discordapp.net/external/jA6d51hGJKx3iY96P2tVpNZUtZunwQ9bkQWzZCKzVR0/https/lh3.googleusercontent.com/a-/ALV-UjWlYbZJzroFDg_lOfVgT_K23XEvfqWbhGt5RZV_8ly1Aw?format=webp">
+                <div class="attacker-name">
+                    <span>RioOzZ</span>
+                </div>
+                <div class="weapon">
+                    <img class="weapon-image" src="./assets/weapons/-879347409.png">
+                </div>
+                <div class="victim-name">
+                    <span>MPLAKEH</span>
+                </div>
+                <img class="victim-pp" src="https://images-ext-2.discordapp.net/external/jA6d51hGJKx3iY96P2tVpNZUtZunwQ9bkQWzZCKzVR0/https/lh3.googleusercontent.com/a-/ALV-UjWlYbZJzroFDg_lOfVgT_K23XEvfqWbhGt5RZV_8ly1Aw?format=webp">
+            </div>
+        </div> -->
+    </div>
+
+    <div class="progressbarmec">
+        <div id="progress" class="hidden">
+            <div id="progress-value" class="color"></div>
+            <div id="progress-text">PROGRESS...</div>
+        </div>
+    </div>
+
+    <div class="hud">
+        <div class="player-health-infos">
+            <div class="player-armor-bar">
+                <div class="fill armor-plate"></div>
+                <div class="fill armor-plate"></div>
+                <div class="fill armor-plate"></div>
+                <div class="fill armor-plate"></div>
+            </div>
+            <div class="player-hp-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+	<div class="killcam">
+        <div class="killcam-pp">
+            <img id="ppkiller" src="https://media.discordapp.net/attachments/1186408920688898048/1192894957112000513/discord-avatar-256-LECAK.gif?ex=65aabd00&is=65984800&hm=cb7c944dfa8d1a4f99040557de125c5861fc3d5a3ca884cb07c4cf6bcaeb513b&=%22&" alt="">
+        </div>
+
+
+
+        <div class="killcam-middle">
+            <div class="killcam-username">
+                <p id="usernamekiller">MP</p>
+            </div>
+            <div class="killcam-hud">
+                <div class="killcam-player-bar">
+                    <div class="killcam-armor-bar">
+                        <div class="killcam-armor-plate">
+                            <div class="killcam-fill"></div>
+                        </div>
+                        <div class="killcam-armor-plate">
+                            <div class="killcam-fill"></div>
+                        </div>
+                        <div class="killcam-armor-plate">
+                            <div class="killcam-fill"></div>
+                        </div>
+                        <div class="killcam-armor-plate"></div>
+                    </div>
+                    <div class="killcam-health-bar">
+                        <div class="killcam-progress"></div>
+                    </div> 
+                </div> 
+            </div>
+        </div>
+        <div class="killcam-weapon">
+            <img id="weaponkiller" src="assets/weapon_tacticalrifle.png" alt="">
+        </div>
+    </div>
+    
+    <div class="redzone-killleader">
+        <div class="infokillleader">
+            <div class="textkillleader">KILL LEADER</div>
+            <img src="assets/crane.png" id="crane">
+        </div>
+        <div class="statskillleader">
+            <div class="redzone-killleader-username">MP LE MAITRE</div>
+            <div class="redzone-killleader-kills">33</div>
+        </div>
+        
+    </div>
+
+
+    <div class="teleport-container">
+       <div class="titleteleport">
+            <div class="textteleport">TELEPORT</div>
+       </div>
+       <div class="allteleport">
+            <div class="teleportitem">
+                <div class="lebackgroundimage motel">
+                    <div class="titlesafezone">MOTEL SAFEZONE</div>
+                    <div class="buttonteleport" id="motel">Teleport</div>
+                </div>
+            </div>
+            <div class="teleportitem">
+                <div class="lebackgroundimage pc">
+                    <div class="titlesafezone">MAIN SAFEZONE</div>
+                    <div class="buttonteleport" id="main">Teleport</div>
+                </div>
+            </div>
+            <div class="teleportitem">
+                <div class="lebackgroundimage bikers">
+                    <div class="titlesafezone">BIKERS SAFEZONE</div>
+                    <div class="buttonteleport" id="bikers">Teleport</div>
+                </div>
+            </div>
+            <div class="teleportitem">
+                <div class="lebackgroundimage paleto">
+                    <div class="titlesafezone">PALETO SAFEZONE</div>
+                    <div class="buttonteleport" id="north">Teleport</div>
+                </div>
+            </div>
+       </div>
+    </div>
+
+
+    <div class="dialog">
+        <div class="dialog-namepnj female">NICOLAS</div>
+        <div class="dialog-desc">HELLO MISTER ! HOW CAN I HELP YOU</div>
+        <div class="dialog-choices">
+            <div class="dialog-choice males">BUY OR SELL WEAPONS</div>
+            <div class="dialog-choice females">MODIFY WEAPONS</div>
+        </div>  
+    </div>
+    
+    
+    
+    <div class="inentrainement">
+        <div class="pressf3">
+            PRESS F3 TO OPEN SETTINGS
+        </div>
+        <div class="showdiffcult">
+            <div class="showdiffcultitem">
+                <div class="titlediffcult">Bot Speed</div>
+                <div class="diffcultactuel diffcult0">EASY</div>
+            </div>
+            <div class="showdiffcultitem">
+                <div class="titlediffcult">Bot Count</div>
+                <div class="diffcultactuel diffcult1">1</div>
+            </div>
+            <div class="showdiffcultitem">
+                <div class="titlediffcult">Bot Moove</div>
+                <div class="diffcultactuel diffcult2">NO</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="parametreentrianement">
+        <div class="arme easy" id="0">
+            <div class="diffcultactuele">EASY</div>
+            <div class="titlediffculte">Bot Speed</div>
+        </div>
+        <div class="laborder"></div>
+        <div class="arme easy" id="1">
+            <div class="diffcultactuele">1</div>
+            <div class="titlediffculte">Bot Count</div>
+        </div>
+        <div class="laborder"></div>
+        <div class="arme easy" id="2">
+            <div class="diffcultactuele">NO</div>
+            <div class="titlediffculte">Bot Moove</div>
+        </div>
+    </div>
+    
+    <div class="squad">
+        <div class="barrehautsquad">
+            <div class="mysquad activehautsquad">MY SQUAD</div>
+            <div class="joinsquad">JOIN A PUBLIC SQUAD</div>
+        </div>
+        <div class="barrebassquad">
+            <div class="donthavesquad">
+                YOU DON'T HAVE ANY SQUAD!
+                <div class="createsquad">Create my own squad</div>
+
+            </div>
+            <div class="lasquad">
+                <div class="mysquadinsquad">MY SQUAD (1)</div>
+                <div class="allmemberinsquad">
+                    <div class="membersquaditem">
+                        <div class="usernameplayerquad"><i class="fa-solid fa-user"></i> Lidlprice (You)</div>
+                        <div class="actionplayersquad">LEAVE</div>
+                    </div>
+                    <div class="membersquaditem">
+                        <div class="usernameplayerquad"><i class="fa-solid fa-user"></i> Lidlprice</div>
+                        <div class="actionplayersquad">KICK</div>
+                    </div>
+                    <div class="additemsquad">
+                        <div class="addsquad">ADD</div>
+                    </div>
+                    <div class="additemsquad">
+                        <div class="addsquad">ADD</div>
+                    </div>
+                </div>
+                <div class="textoption">OPTIONS</div>
+                <div class="alloption">
+                    <div class="private">
+                        <div class="textprivate">
+                            <div class="letextprivate">Private</div>
+                            <div class="putsquad">Put your squad in invite only</div>
+                        </div>
+                        <div class="lacheckbox">
+                            <input type="checkbox" id="privatequad" name="privatequad" value="privatequad">
+                        </div>
+                    </div>
+                    <div class="deletesquad">
+                        <div class="textdelete">
+                            <div class="textdeletesquad">Delete</div>
+                            <div class="textdeleteyoursquad">Delete your squad</div>
+                        </div>
+                        <div class="buttondeletesquad" onclick="DeleteSquad()">
+                            DELETE
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="forjoinsquad">
+                <div class="textpublicsquad">PUBLIC SQUADS</div>
+                <div class="allsquad">
+                    <div class="squaditem">
+                            <img src="assets/discord-avatar-512-0ISPX.gif" id="imgsquad">
+                            <div class="alltextnamesquad">
+                                <div class="namesquad">Lidlprice squad’s</div>
+                                <div class="membersquad">2 members</div>
+                            </div>
+                            <div class="joinsquaditem">JOIN</div>
+                    </div>
+                    <div class="squaditem">
+                        <img src="assets/discord-avatar-512-0ISPX.gif" id="imgsquad">
+                        <div class="alltextnamesquad">
+                            <div class="namesquad">Lidlprice squad’s</div>
+                            <div class="membersquad">2 members</div>
+                        </div>
+                        <div class="joinsquaditem">JOIN</div>
+                </div>
+                <div class="squaditem">
+                    <img src="assets/discord-avatar-512-0ISPX.gif" id="imgsquad">
+                    <div class="alltextnamesquad">
+                        <div class="namesquad">Lidlprice squad’s</div>
+                        <div class="membersquad">2 members</div>
+                    </div>
+                    <div class="joinsquaditem">JOIN</div>
+            </div>
+            <div class="squaditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imgsquad">
+                <div class="alltextnamesquad">
+                    <div class="namesquad">Lidlprice squad’s</div>
+                    <div class="membersquad">2 members</div>
+                </div>
+                <div class="joinsquaditem">JOIN</div>
+            </div>
+            <div class="squaditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imgsquad">
+                <div class="alltextnamesquad">
+                    <div class="namesquad">Lidlprice squad’s</div>
+                    <div class="membersquad">2 members</div>
+                </div>
+                <div class="joinsquaditem">JOIN</div>
+            </div>
+            <div class="squaditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imgsquad">
+                <div class="alltextnamesquad">
+                    <div class="namesquad">Lidlprice squad’s</div>
+                    <div class="membersquad">2 members</div>
+                </div>
+                <div class="joinsquaditem">JOIN</div>
+            </div>
+            <div class="squaditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imgsquad">
+                <div class="alltextnamesquad">
+                    <div class="namesquad">Lidlprice squad’s</div>
+                    <div class="membersquad">2 members</div>
+                </div>
+                <div class="joinsquaditem">JOIN</div>
+            </div>
+            <div class="squaditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imgsquad">
+                <div class="alltextnamesquad">
+                    <div class="namesquad">Lidlprice squad’s</div>
+                    <div class="membersquad">2 members</div>
+                </div>
+                <div class="joinsquaditem">JOIN</div>
+            </div>
+            <div class="squaditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imgsquad">
+                <div class="alltextnamesquad">
+                    <div class="namesquad">Lidlprice squad’s</div>
+                    <div class="membersquad">2 members</div>
+                </div>
+                <div class="joinsquaditem">JOIN</div>
+            </div>
+            <div class="squaditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imgsquad">
+                <div class="alltextnamesquad">
+                    <div class="namesquad">Lidlprice squad’s</div>
+                    <div class="membersquad">2 members</div>
+                </div>
+                <div class="joinsquaditem">JOIN</div>
+            </div>
+            <div class="squaditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imgsquad">
+                <div class="alltextnamesquad">
+                    <div class="namesquad">Lidlprice squad’s</div>
+                    <div class="membersquad">2 members</div>
+                </div>
+                <div class="joinsquaditem">JOIN</div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hudsquad">
+        <div class="allmemberinsquadhud">
+            <div class="memberhuditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imghudsquad">
+                <div class="allinfomemberhudsquad">
+                    <div class="pseudohudsquad">Lidlprice</div>
+                    <div class="player-armor-bar-squad">
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad"></div>
+                    </div>
+                    <div class="player-hp-bar-squad">
+                        <div class="progress-squad" style="--percentage: 100%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="memberhuditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imghudsquad">
+                <div class="allinfomemberhudsquad">
+                    <div class="pseudohudsquad">Lidlprice</div>
+                    <div class="player-armor-bar-squad">
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad"></div>
+                    </div>
+                    <div class="player-hp-bar-squad">
+                        <div class="progress-squad" style="--percentage: 100%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="memberhuditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imghudsquad">
+                <div class="allinfomemberhudsquad">
+                    <div class="pseudohudsquad">Lidlprice</div>
+                    <div class="player-armor-bar-squad">
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad"></div>
+                    </div>
+                    <div class="player-hp-bar-squad">
+                        <div class="progress-squad" style="--percentage: 100%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="memberhuditem">
+                <img src="assets/discord-avatar-512-0ISPX.gif" id="imghudsquad">
+                <div class="allinfomemberhudsquad">
+                    <div class="pseudohudsquad">Lidlprice</div>
+                    <div class="player-armor-bar-squad">
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad">
+                            <div class="fill-squad" style="--percentage: 100%"></div>
+                        </div>
+                        <div class="armor-plate-squad"></div>
+                    </div>
+                    <div class="player-hp-bar-squad">
+                        <div class="progress-squad" style="--percentage: 100%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    
+    <div class="trade">
+        <div class="partiegauchetrade">
+            <div class="myoffer">
+                <div class="allmyoffer">
+                    <div class="rangerrow">
+                        <div class="textyouroffer backred">YOUR OFFER</div>
+                        <div class="mykcoinstrade">
+                            <input name="nbkcoinatrade" id="nbkcoinatradea" type="number" value="1">
+                            <div class="textmoneytrade">K</div>
+                        </div>
+                    </div>
+                    <div class="rangerrow">
+                        <div class="profiltrade">
+                            <img src="assets/discord-avatar-512-0ISPX.gif" id="mypptrade">
+                            <div class="larowtrade">
+                                <div class="lacolonnetrade">
+                                    <div class="mypseudotrade">Lidlprice</div>
+                                    <div class="soustitre">name</div>
+                                </div>
+                                <div class="lacolonnetrade">
+                                    <div class="myidtrade">99</div>
+                                    <div class="soustitre">Id</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mymoneytrade">
+                            <input name="nbmoneyatrade" id="nbmoneyatradea" type="number" value="0">
+                            <div class="textmoneytrade">$</div>
+                        </div>
+                    </div>
+                    <div class="lesoffer">
+                        <div class="itemoffer clicker">
+                            <div class="image-bg">
+                                <img src="items/deluxo.png" alt="">
+                            </div>
+                            <div class="item-slot-info">
+                                <h1>Deluxo</h1>
+                                <p class="item-count">x2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="myinventory">
+                <div class="moninventory">
+                    <div class="textyourinventory">YOUR INVENTORY</div>
+                    <div class="allinventory">
+                        <div class="myitemtrade clicker">
+                            <div class="image-bg">
+                                <img src="items/deluxo.png" alt="">
+                            </div>
+                            <div class="item-slot-info">
+                                <h1>Deluxo</h1>
+                                <p class="item-count">x2</p>
+                            </div>
+                        </div>
+                        <div class="myitemtrade clicker">
+                            <div class="image-bg">
+                                <img src="items/deluxo.png" alt="">
+                            </div>
+                            <div class="item-slot-info">
+                                <h1>Deluxo</h1>
+                                <p class="item-count">x2</p>
+                            </div>
+                        </div>
+                        <div class="myitemtrade clicker">
+                            <div class="image-bg">
+                                <img src="items/deluxo.png" alt="">
+                            </div>
+                            <div class="item-slot-info">
+                                <h1>Deluxo</h1>
+                                <p class="item-count">x2</p>
+                            </div>
+                        </div>
+                        <div class="myitemtrade clicker">
+                            <div class="image-bg">
+                                <img src="items/deluxo.png" alt="">
+                            </div>
+                            <div class="item-slot-info">
+                                <h1>Deluxo</h1>
+                                <p class="item-count">x2</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="partiemilieutrade">
+            <div class="allmilieutrade">
+                <div class="rondappendtrade">
+                    <div class="lerondtrade">
+                        <div class="timertrade">
+                            <div class="decomptetimertrade">5</div>
+                            LEFT
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lesbuttonacceptorrefusetrade">
+                    <div class="accepttrade clicker">ACCEPT</div>
+                    <div class="canceltrade clicker">CANCEL</div>
+                    <div class="letexttrade">Trade in progress</div>
+                </div>
+            </div>
+        </div>
+        <div class="partiedroitetrade">
+            <div class="traderoffer">
+                <div class="alltraderoffer">
+                    <div class="rangerrow">
+                        <div class="textyouroffertrader backred">TRADER OFFER</div>
+                        <div class="tradekcoinstrade">
+                            <div class="nbkcoinstrade">1</div>
+                            <div class="textmoneytrade">K</div>
+                        </div>
+                    </div>
+                    <div class="rangerrow">
+                        <div class="profiltrade">
+                            <img src="assets/discord-avatar-512-0ISPX.gif" id="traderpptrade">
+                            <div class="larowtrade">
+                                <div class="lacolonnetrade">
+                                    <div class="traderpseudotrade">Lidlprice</div>
+                                    <div class="soustitre">name</div>
+                                </div>
+                                <div class="lacolonnetrade">
+                                    <div class="traderidtrade">99</div>
+                                    <div class="soustitre">Id</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tradermoneytrade">
+                            <div class="nbmoneytrade">1</div>
+                            <div class="textmoneytrade">$</div>
+                        </div>
+                    </div>
+                    <div class="lesoffertrader">
+                        <div class="itemoffertrader">
+                            <div class="image-bg">
+                                <img src="items/deluxo.png" alt="">
+                            </div>
+                            <div class="item-slot-info">
+                                <h1>Deluxo</h1>
+                                <p class="item-count">x2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="myinventory">
+                <div class="moninventory">
+                    <div class="textyourinventory">TRADER INVENTORY</div>
+                    <div class="alltraderinventory">
+                        <div class="myitemtradedutrader">
+                            <div class="image-bg">
+                                <img src="items/deluxo.png" alt="">
+                            </div>
+                            <div class="item-slot-info">
+                                <h1>Deluxo</h1>
+                                <p class="item-count">x2</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="messagedeletevehicle">
+        <div class="text1">
+            Clear Vehicles
+        </div>
+        <div class="text2">
+            <div class="text3">Removing vehicles in 15secondes. Get into the vehicles</div>
+            <div class="text4">to keep them</div>
+        </div>
+    </div>
+    <div class="shopk9">
+        <div class="k9logo">
+            <img src="k9.png" id="ppk9">
+        </div>
+        <div class="containershopk9">
+            <div class="barreshopk9">
+                <div class="category">
+                    <div class="titlebarreshopk9">CATEGORY</div>
+                    <div class="itemcategory" id="items">
+                        Items
+                    </div>
+                    <div class="itemcategory" id="points">
+                        Points
+                    </div>
+                    <div class="itemcategory" id="vip">
+                        VIP
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="titlebarreshoplinksk9">LINKS</div>
+                    <div class="itemcategory" id="tebex">
+                        Tebex
+                    </div>
+                    <div class="itemcategory" id="discord">
+                        Discord
+                    </div>
+                </div>
+                <div class="myprofilshopk9">
+                    <img src="assets/discord-avatar-512-0ISPX.gif" id="ppsteamshopk9">
+                    <div class="lacolonneshopk9">
+                        <div class="nbkcoinsshopk9">999 999</div>
+                        <div class="soustitreshopk9">KCoins</div>
+                    </div>
+                    <div class="lacolonneshopk9">
+                        <div class="iduniqueshopk9">1</div>
+                        <div class="soustitreshopk9">Id</div>
+                    </div>
+                </div>
+            </div>
+            <div class="allobject">
+                <div class="titleitembarreshopk9">ITEMS</div>
+                <div class="allcaseshopk9">
+                    <div class="caseshopk9">
+                        <div class="imageptn">
+                            <img src="items/weapon_specialcarbine.png" id="litemcaseshopk9">
+                        </div>
+                        <div class="infoitemshopk9">
+                            <div class="titlearmeshopk9">Special Carbine</div>
+                            <div class="typeweaponshopk9">Weapon</div>
+                            <div class="nbkcoiensshopk9">99,999</div>
+                            <div class="textkcoinsshopk9">Kcoins</div>
+                        </div>
+                        <div class="buttonbuyshopk9">Buy</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="streamerk9">
+        <div class="titlestreamerk9">Streamer K9 PVP</div>
+        <div class="allstreamer">
+            <div class="streameritem">
+                <div class="streamer1">
+                    <img src="assets/discord-avatar-512-0ISPX.gif" id="ppsteamstreamer">
+                    <div class="lacolonnestreamer">
+                        <div class="pseudostreamer">MP DEV</div>
+                        <div class="instreaming">Streaming</div>
+                    </div>
+                </div>
+                <div class="streamer2">
+                    <div class="buttonview">View</div>
+                </div>
+            </div>
+            <div class="streameritem">
+                <div class="streamer1">
+                    <img src="assets/discord-avatar-512-0ISPX.gif" id="ppsteamstreamer">
+                    <div class="lacolonnestreamer">
+                        <div class="pseudostreamer">LidlPrice</div>
+                        <div class="instreaming">Streaming</div>
+                    </div>
+                </div>
+                <div class="streamer2">
+                    <div class="buttonview">View</div>
+                </div>
+            </div>
+            <div class="streameritem">
+                <div class="streamer1">
+                    <img src="assets/discord-avatar-512-0ISPX.gif" id="ppsteamstreamer">
+                    <div class="lacolonnestreamer">
+                        <div class="pseudostreamer">Stone</div>
+                        <div class="notstreaming">Not Streaming</div>
+                    </div>
+                </div>
+                <div class="streamer2">
+                    <div class="buttonview">View</div>
+                </div>
+            </div>
+            <div class="streameritem">
+                <div class="streamer1">
+                    <img src="assets/discord-avatar-512-0ISPX.gif" id="ppsteamstreamer">
+                    <div class="lacolonnestreamer">
+                        <div class="pseudostreamer">Brouncha</div>
+                        <div class="notstreaming">Not Streaming</div>
+                    </div>
+                </div>
+                <div class="streamer2">
+                    <div class="buttonview">View</div>
+                </div>
+            </div>
+            <div class="streameritem">
+                <div class="streamer1">
+                    <img src="assets/discord-avatar-512-0ISPX.gif" id="ppsteamstreamer">
+                    <div class="lacolonnestreamer">
+                        <div class="pseudostreamer">Un random du web</div>
+                        <div class="notstreaming">Not Streaming</div>
+                    </div>
+                </div>
+                <div class="streamer2">
+                    <div class="buttonview">View</div>
+                </div>
+            </div>
+            <div class="streameritem">
+                <div class="streamer1">
+                    <img src="assets/discord-avatar-512-0ISPX.gif" id="ppsteamstreamer">
+                    <div class="lacolonnestreamer">
+                        <div class="pseudostreamer">MP DEV</div>
+                        <div class="notstreaming">Not Streaming</div>
+                    </div>
+                </div>
+                <div class="streamer2">
+                    <div class="buttonview">View</div>
+                </div>
+            </div>
+            <div class="streameritem">
+                <div class="streamer1">
+                    <img src="assets/discord-avatar-512-0ISPX.gif" id="ppsteamstreamer">
+                    <div class="lacolonnestreamer">
+                        <div class="pseudostreamer">MP DEV</div>
+                        <div class="notstreaming">Not Streaming</div>
+                    </div>
+                </div>
+                <div class="streamer2">
+                    <div class="buttonview">View</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kitmenu">
+        <div class="barrekitmenu">
+            <img src="k9.png" id="logok9kitmenu">
+            <div class="titlekitmenu">KIT MENU</div>
+            <div class="buttonclosekitmenu" onclick="closekit()">Close</div>
+        </div>
+        <div class="leskits">
+            <div class="allkit">
+                <div class="kititem">
+                    <div class="titlekitname">Starter Kit</div>
+                    <img src="https://media.discordapp.net/attachments/1110966071265083394/1204791313061511248/Nouveau_projet_22.png?ex=65d60458&is=65c38f58&hm=8b952718f975058dac1a5ace473474f2bf66a9547773439f9e4f61be1924acae&=&format=webp&quality=lossless&width=472&height=472" id="imgkititem">
+                    <div class="buttonclaimkitmenu hoverborderjaune" onclick="ClaimKit('starter')">CLAIM</div>
+                </div>
+                <div class="kititem">
+                    <div class="titlekitname">Daily Kit</div>
+                    <img src="https://media.discordapp.net/attachments/1110966071265083394/1204791312805666896/Nouveau_projet_23.png?ex=65d60458&is=65c38f58&hm=b48081df2fc6e53b4e8f107faf25970e6bb261229482b77ed709aa2fe335067e&=&format=webp&quality=lossless&width=472&height=472" id="imgkititem">
+                    <div class="buttonclaimkitmenu hoverborderjaune" onclick="ClaimKit('daily')">CLAIM</div>
+                </div>
+                <div class="kititem">
+                    <div class="titlekitname">Weekly Kit</div>
+                    <img src="https://media.discordapp.net/attachments/1110966071265083394/1204791312558325820/Nouveau_projet_24.png?ex=65d60458&is=65c38f58&hm=7ce84e4eaf3775b497c75c368a4f7f62b118994923faf3a1e5284a3f55d3410c&=&format=webp&quality=lossless&width=472&height=472" id="imgkititem">
+                    <div class="buttonclaimkitmenu hoverborderjaune" onclick="ClaimKit('weekly')">CLAIM</div>
+                </div>
+                <div class="kititem">
+                    <div class="titlekitname">Discord Kit</div>
+                    <img src="https://media.discordapp.net/attachments/1110966071265083394/1204791312260272229/Nouveau_projet_25.png?ex=65d60458&is=65c38f58&hm=996468c36e5d1274b1fb37cd848e399ca85da5777f78acbb9997c36d2a62fd6d&=&format=webp&quality=lossless&width=472&height=472" id="imgkititem">
+                    <div class="buttonclaimkitmenu hoverborderjaune" onclick="ClaimKit('discord')">CLAIM</div>
+                </div>
+                <div class="kititem">
+                    <div class="titlekitname">Booster Kit</div>
+                    <img src="https://media.discordapp.net/attachments/1110966071265083394/1204791311945830460/Nouveau_projet_26.png?ex=65d60458&is=65c38f58&hm=e297d985e6be4cac111ccab1bef4ba38b6551a72cac2dedd8a04f90b7f2c960c&=&format=webp&quality=lossless&width=472&height=472" id="imgkititem">
+                    <div class="buttonclaimkitmenu hoverborderjaune" onclick="ClaimKit('booster')">CLAIM</div>
+                </div>
+                <div class="kititem">
+                    <div class="titlekitname">Streamer Kit</div>
+                    <img src="https://media.discordapp.net/attachments/1110966071265083394/1204791311652102254/Nouveau_projet_27.png?ex=65d60458&is=65c38f58&hm=be81480365a95b3cb63fe53ea92c665894f82d287cbc33ea236aea4a7c6380b5&=&format=webp&quality=lossless&width=472&height=472" id="imgkititem">
+                    <div class="buttonclaimkitmenu hoverborderjaune" onclick="ClaimKit('streamer')">CLAIM</div>
+                </div>
+                <div class="kititem">
+                    <div class="titlekitname">Diamond Kit</div>
+                    <img src="https://media.discordapp.net/attachments/1110966071265083394/1204791311287455864/Nouveau_projet_28.png?ex=65d60458&is=65c38f58&hm=7bf7f4222fb1ba84a591abfc375b0cc220d388a9784d229f08d52d7e214fd548&=&format=webp&quality=lossless&width=472&height=472" id="imgkititem">
+                    <div class="buttonclaimkitmenu hoverborderjaune" onclick="ClaimKit('gold')">CLAIM</div>
+                </div>
+                <div class="kititem">
+                    <div class="titlekitname">Paladium Kit</div>
+                    <img src="https://media.discordapp.net/attachments/1110966071265083394/1204791310964498533/Nouveau_projet_29.png?ex=65d60458&is=65c38f58&hm=67da41f39e6fb6091fbe9ff3fce7f4adf4dd4269a3b47be7ccaa1fcfe758949c&=&format=webp&quality=lossless&width=472&height=472" id="imgkititem">
+                    <div class="buttonclaimkitmenu hoverborderjaune" onclick="ClaimKit('diamond')">CLAIM</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cheaterworld">
+        <div class="banid">Ban ID : 99</div>
+        <div class="textworldcheater">CHEATER WORLD</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+    <script src="script.js"></script>
+</body>
+    
+</html>

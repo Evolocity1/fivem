@@ -1,0 +1,35 @@
+:root {
+    --white: rgba(255, 255, 255, 1);
+    --white-70: rgba(255, 255, 255, .7);
+    --white-50: rgba(255, 255, 255, .5);
+    --white-30: rgba(255, 255, 255, .3);
+    --white-0: rgba(255, 255, 255, 0);
+    --case: rgba(30, 28, 28, .65);
+    --input: rgba(27, 23, 23, 0.6);
+    --border: #393939;
+    --itemkitback: #1D1D1B;
+    --itemslotinfo: #101010;
+    --itemcase: #232020;
+    --redoffline: #db0707;
+    --red : #772020;
+    --green: #3DDE98;
+    --ecriture: #dcdcdc;
+    --yellow: #f9f871;
+    --yellow2: rgb(231, 195, 36);
+    --yellow90: rgba(249, 248, 113, .9);
+    --yellow80: rgba(249, 248, 113, .8);
+    --yellow70: rgba(249, 248, 113, .7);
+    --yellow60: rgba(249, 248, 113, .6);
+    --yellow50: rgba(249, 248, 113, .5);
+    --yellow40: rgba(249, 248, 113, .4);
+    --yellow30: rgba(249, 248, 113, .3);
+    --yellow20: rgba(249, 248, 113, .2);
+    --yellow10: rgba(249, 248, 113, .1);
+    --blue: #1e90ff;
+    --red-health: #ff0000;
+    --legendary: #f90;
+    --epic: #f0f;
+    --rare: #09f;
+    --uncommon: #1eff00;
+    --common: #dcdcdc;
+}

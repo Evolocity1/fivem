@@ -1,0 +1,410 @@
+.leaderboard {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    bottom: 0;
+    /* background-color: aquamarine; */
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 87%;
+    user-select: none;
+}
+
+.leaderboard .PlayerTopThree {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: max-content;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  position: relative;
+  width: 40%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.leaderboard .PlayerTopThree .TopItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 5vw;
+    left: 0.1vw;
+    width: 99%;
+    height: 30vh;
+    background: var(--case);
+    border: 1px solid var(--border); 
+    border-left: 0.7vh solid var(--yellow60);
+}
+
+.leaderboard .PlayerTopThree .TopItem .top-image {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.leaderboard .PlayerTopThree .TopItem .top-image img {
+  width: 100%;
+  height: 50%;
+  object-fit: border-box;
+}
+
+.leaderboard .PlayerTopThree .TopItem .place {
+  position: absolute;
+  top: 15vh;
+  font-size: 1.2vw;
+  font-weight: 700;
+}
+
+.leaderboard .PlayerTopThree .TopItem .username-leaderboardTop {
+  position: absolute;
+  top: 18vh;
+  font-size: 1.5vw;
+  font-weight: 700;
+}
+
+
+.leaderboard .sdt-leaderboard {
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 45.7%;
+  left: 70%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  width: 55%;
+  height: 80%;
+}
+
+
+.sdtleaderboard-main * {
+  color: white;
+}
+.sdtleaderboard-main .sdtleaderboard-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 3vh;
+  border-radius: 0.2vh;
+  margin-top: 1vh;
+  border-bottom: 0.5vh solid var(--yellow);
+}
+.sdtleaderboard-main .sdtleaderboard-title p {
+  width: 20%;
+  margin: 0;
+  text-align: center;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1vw;
+  color: #ffffff;
+}
+.sdtleaderboard-main .sdtleaderboard-title p:nth-child(1) {
+  width: 10% !important;
+  text-align: left !important;
+  padding-left: 4vh;
+}
+.sdtleaderboard-main .sdtleaderboard-content {
+  position: relative;
+  width: 100%;
+  height: 61.5vh;
+  overflow-x: hidden;
+  margin-top: 0.6vh;
+}
+.sdtleaderboard-main .sdtleaderboard-content::-webkit-scrollbar {
+  display: none;
+}
+.sdtleaderboard-main .sdtleaderboard-content .sdtleaderboardrow-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 99.8%;
+  height: 3.5vh;
+  margin-top: 0.4vh;
+  background: var(--case);
+  border: 1px solid var(--border);
+  border-radius: 1px;
+}
+.sdtleaderboard-main .sdtleaderboard-content .sdtleaderboardrow-item h1 {
+  width: 10%;
+  margin: 0;
+  text-align: left;
+  padding-left: 4vh;
+  font-size: 1.7vh;
+}
+.sdtleaderboard-main .sdtleaderboard-content .sdtleaderboardrow-item p {
+  width: 20%;
+  margin: 0;
+  text-align: center;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.4vh;
+  color: #ffffff;
+}
+
+.leaderboard-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0.1vw;
+  left: 94%;
+  bottom: 0;
+  transform: translate(-70%, -80%);
+  width: 20%;
+  height: 5%;
+  gap: 0.5vw;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.leaderboard-button-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--case);
+  border: 1px solid var(--border);
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.leaderboard-button-item p {
+  margin: 0;
+  font-size: 0.9vw;
+  font-weight: 700;
+  color: var(--text);
+}	
+
+#player:hover {
+  background-color: #1e1c1c;
+  border: 0.1vh solid var(--yellow70);
+}
+
+
+
+
+
+/* LEADERBOARCREW */
+
+.leaderboardcrew {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  bottom: 0;
+  /* background-color: aquamarine; */
+  transform: translate(-50%, -50%);
+  width: 98%;
+  height: 87%;
+  user-select: none;
+}
+
+.leaderboardcrew .PlayerTopThreecrew {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: max-content;
+grid-column-gap: 20px;
+grid-row-gap: 20px;
+position: relative;
+width: 40%;
+height: 100%;
+overflow-x: hidden;
+}
+
+.leaderboardcrew .PlayerTopThreecrew .TopItemcrew {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 5vw;
+  left: 0.1vw;
+  width: 99%;
+  height: 30vh;
+  background: var(--case);
+  border: 1px solid var(--border); 
+  border-left: 0.7vh solid var(--yellow60);
+}
+
+.leaderboardcrew .PlayerTopThreecrew .TopItemcrew .topcrew-image {
+margin: 0 auto;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: top;
+background-repeat: no-repeat;
+}
+
+.leaderboardcrew .PlayerTopThreecrew .TopItemcrew .topcrew-image img {
+width: 100%;
+height: 50%;
+object-fit: border-box;
+}
+
+.leaderboardcrew .PlayerTopThreecrew .TopItemcrew .placecrew {
+position: absolute;
+top: 15vh;
+font-size: 1.2vw;
+font-weight: 700;
+}
+
+.leaderboardcrew .PlayerTopThreecrew .TopItemcrew .username-leaderboardcrewTop {
+position: absolute;
+top: 18vh;
+font-size: 1.5vw;
+font-weight: 700;
+}
+
+
+.leaderboardcrew .sdt-leaderboardcrew {
+flex-direction: column;
+align-items: center;
+position: absolute;
+top: 45.7%;
+left: 70%;
+bottom: 0;
+transform: translate(-50%, -50%);
+width: 55%;
+height: 80%;
+}
+
+
+.sdtleaderboardcrew-main * {
+color: white;
+}
+.sdtleaderboardcrew-main .sdtleaderboardcrew-title {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+position: relative;
+width: 100%;
+height: 3vh;
+border-radius: 0.2vh;
+margin-top: 1vh;
+border-bottom: 0.5vh solid var(--yellow);
+}
+.sdtleaderboardcrew-main .sdtleaderboardcrew-title p {
+width: 20%;
+margin: 0;
+text-align: center;
+font-style: normal;
+font-weight: 900;
+font-size: 0.9vw;
+color: #ffffff;
+}
+.sdtleaderboardcrew-main .sdtleaderboardcrew-title p:nth-child(1) {
+width: 10% !important;
+text-align: left !important;
+padding-left: 4vh;
+}
+.sdtleaderboardcrew-main .sdtleaderboardcrew-content {
+position: relative;
+width: 100%;
+height: 61.5vh;
+overflow-x: hidden;
+margin-top: 0.6vh;
+}
+.sdtleaderboardcrew-main .sdtleaderboardcrew-content::-webkit-scrollbar {
+display: none;
+}
+.sdtleaderboardcrew-main .sdtleaderboardcrew-content .sdtleaderboardcrewrow-item {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+align-items: center;
+position: relative;
+width: 99.8%;
+height: 3.5vh;
+margin-top: 0.4vh;
+background: var(--case);
+border: 1px solid var(--border);
+border-radius: 1px;
+}
+.sdtleaderboardcrew-main .sdtleaderboardcrew-content .sdtleaderboardcrewrow-item h1 {
+width: 10%;
+margin: 0;
+text-align: left;
+padding-left: 4vh;
+font-size: 1.7vh;
+}
+.sdtleaderboardcrew-main .sdtleaderboardcrew-content .sdtleaderboardcrewrow-item p {
+width: 20%;
+margin: 0;
+text-align: center;
+font-style: normal;
+font-weight: 900;
+font-size: 1.4vh;
+color: #ffffff;
+}
+
+.leaderboardcrew-button {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+position: absolute;
+top: 0.1vw;
+left: 94%;
+bottom: 0;
+transform: translate(-70%, -80%);
+width: 20%;
+height: 5%;
+gap: 0.5vw;
+border-radius: 1px;
+cursor: pointer;
+}
+
+.leaderboardcrew-button-item {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+position: relative;
+width: 100%;
+height: 100%;
+background: var(--case);
+border: 1px solid var(--border);
+border-radius: 1px;
+cursor: pointer;
+}
+
+.leaderboardcrew-button-item p {
+margin: 0;
+font-size: 0.9vw;
+font-weight: 700;
+color: var(--text);
+}
+
+.leaderboardcrew-button {
+    transition: 200ms all ease-in;
+}
+
+#player:hover {
+background-color: #1e1c1c;
+border: 0.1vh solid var(--yellow70);
+}
+
+#crews {
+    background-color: #1e1c1c;
+	border: 0.1vh solid var(--yellow70);
+}
